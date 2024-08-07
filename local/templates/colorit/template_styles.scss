@@ -1,4 +1,33 @@
- body {
-   padding: 0;
-   margin: 0;
- }
+:root{
+  --title-color: #141C20;
+  --main-text-color:#57656D;
+  --text-accent:#055B8C;
+  --background-dark: #5F5E64;
+  --background-light: #E4E4E4;
+
+}
+ul, p , *, ::after, ::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: var(--background-light);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+}
