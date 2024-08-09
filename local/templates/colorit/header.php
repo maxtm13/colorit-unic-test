@@ -20,7 +20,8 @@ $CurUri = $APPLICATION->GetCurUri();
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
           rel="stylesheet">
     <?
-
+    CJSCore::Init(array("jquery3"));
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.min.js');
     $APPLICATION->ShowHead();
     ?>
     <meta charset="UTF-8">
@@ -85,12 +86,32 @@ $CurUri = $APPLICATION->GetCurUri();
 
         </div>
         <div class="header__search_btn">
-            <a href="#">
+            <a href class="search_btn">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.7306 20.4376L17.7231 16.43C16.9958 15.7028 16.9618 14.5512 17.4477 13.6447C18.1458 12.3424 18.5429 10.8531 18.5429 9.27143C18.5429 4.15306 14.3898 0 9.27143 0C4.14857 0 0 4.15306 0 9.27143C0 14.3898 4.14857 18.5429 9.27143 18.5429C10.853 18.5429 12.3398 18.1482 13.6407 17.4515C14.5471 16.9662 15.6982 16.9998 16.4255 17.7264L20.4331 21.7306C20.7922 22.0898 21.3714 22.0898 21.7306 21.7306C22.0898 21.3759 22.0898 20.7922 21.7306 20.4376ZM9.27143 16.6975C5.17224 16.6975 1.84082 13.3661 1.84082 9.27143C1.84082 5.17673 5.17224 1.84082 9.27143 1.84082C13.3661 1.84082 16.702 5.17673 16.702 9.27143C16.702 13.3661 13.3661 16.6975 9.27143 16.6975Z"
                           fill="#141C20"/>
                 </svg>
             </a>
+        </div>
+        <div class="header__search_wrapper">
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:search.title",
+                "",
+                Array(
+                    "CATEGORY_0" => array("no"),
+                    "CATEGORY_0_TITLE" => "",
+                    "CHECK_DATES" => "N",
+                    "CONTAINER_ID" => "title-search",
+                    "INPUT_ID" => "title-search-input",
+                    "NUM_CATEGORIES" => "1",
+                    "ORDER" => "date",
+                    "PAGE" => "#SITE_DIR#search/index.php",
+                    "SHOW_INPUT" => "Y",
+                    "SHOW_OTHERS" => "N",
+                    "TOP_COUNT" => "5",
+                    "USE_LANGUAGE_GUESS" => "Y"
+                )
+            );?>
         </div>
         <div class="header__social_box">
 
