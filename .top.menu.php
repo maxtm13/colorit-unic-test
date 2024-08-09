@@ -23,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Продукция", 
-		"", 
+		"/catalog/",
 		Array(), 
 		Array(), 
 		"" 
@@ -43,4 +43,5 @@ $aMenuLinks = Array(
 		"" 
 	)
 );
+
 ?>
