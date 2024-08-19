@@ -1,4 +1,5 @@
-<?//
+<?
+//
 //function getChildren($input, &$start = 0, $level = 0){
 //    $children = array();
 //

@@ -113,6 +113,9 @@ svg {
 .header__social_box .social_link:hover svg {
   fill: #055B8C;
 }
+.header__social_box .social_link.telegram:hover svg > g > path:last-child {
+  stroke: #055B8C;
+}
 .header__callback {
   text-align: right;
 }
@@ -126,6 +129,11 @@ svg {
   font-size: 14px;
   text-decoration: underline;
   color: #055b8c;
+}
+
+.anonce {
+  background-color: #5F5E64;
+  padding: 47px 0 48px;
 }
 
 /*# sourceMappingURL=template_styles.css.map */

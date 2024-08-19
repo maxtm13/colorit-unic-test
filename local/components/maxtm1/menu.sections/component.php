@@ -65,7 +65,6 @@ if($this->StartResultCache())
 		$this->EndResultCache();
 	}
 }
-
 //In "SEF" mode we'll try to parse URL and get ELEMENT_ID from it
 if($arParams["IS_SEF"] === "Y")
 {

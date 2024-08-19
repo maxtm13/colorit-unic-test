@@ -207,6 +207,21 @@
   /*margin:-1.93em 0 0 11.6em;*/
 }
 
+#left-menu li ul li ul {
+  right: -173px;
+  top: 100%;
+  padding: 12px 50px 12px 6px;
+  color: black;
+}
+
+#left-menu .parent > ul > li {
+  position: relative;
+}
+
+#left-menu > li.parent > ul > li > ul > li {
+  margin-bottom: 9px;
+}
+
 #left-menu li:hover ul ul,
 #left-menu li.jshover ul ul,
 #left-menu li:hover ul ul ul,

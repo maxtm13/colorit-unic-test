@@ -134,6 +134,10 @@ svg {
     .social_link:hover svg{
       fill: $text-accent;
     }
+    .social_link.telegram:hover svg>g>path:last-child{
+      stroke: $text-accent;
+
+    }
   }
   &__callback {
     text-align: right;
@@ -151,4 +155,8 @@ svg {
     text-decoration: underline;
     color: $color-2;
   }
+}
+.anonce {
+  background-color: #5F5E64;
+  padding: 47px 0 48px;
 }
