@@ -5,6 +5,8 @@ $APPLICATION->ShowTitle();
 <section class="main_banner">
     <div class="container">
 
+
+
     </div>
 
 </section>

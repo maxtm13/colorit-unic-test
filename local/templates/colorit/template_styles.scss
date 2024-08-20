@@ -12,6 +12,7 @@
 
   $color-1 :#141c20;
   $color-2 :#055b8c;
+  $color-white: #FFFFFF;
   $title-color: #5F5E64;
   $main-text-color:#57656D;
   $text-accent:#055B8C;
@@ -159,4 +160,39 @@ svg {
 .anonce {
   background-color: #5F5E64;
   padding: 47px 0 48px;
+   .category__item {
+    width: 144px;
+    height: 199px;
+    &_pict {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .anonce__item {
+    position: relative;
+  }
+  .section__name {
+    position: absolute;
+    top: 89px;
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+  .section_pict {
+    border: 3px solid #17171B;
+  }
+  .anonce__item_first .section__name {
+    text-align: right;
+    right: 38px;
+    width: 303px;
+  }
+  .anonce__item_second .section__name {
+    text-align: left;
+    left: 38px;
+    width: 204px;
+  }
 }
+
+
+
