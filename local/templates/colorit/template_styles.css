@@ -154,6 +154,14 @@ svg {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.anonce .section__name::after {
+  content: "";
+  position: absolute;
+  background: url(/img/after_accent.svg);
+  width: 112px;
+  height: 4px;
+  bottom: -6px;
+}
 .anonce .section_pict {
   border: 3px solid #17171B;
 }
@@ -162,10 +170,16 @@ svg {
   right: 38px;
   width: 303px;
 }
+.anonce .anonce__item_first .section__name::after {
+  right: 0;
+}
 .anonce .anonce__item_second .section__name {
   text-align: left;
   left: 38px;
   width: 204px;
+}
+.anonce .anonce__item_second .section__name::after {
+  left: 0;
 }
 
 /*# sourceMappingURL=template_styles.css.map */

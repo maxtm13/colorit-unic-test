@@ -178,7 +178,16 @@ svg {
     font-size: 22px;
     text-transform: uppercase;
     color: $color-white;
+    &::after {
+      content: '';
+      position: absolute;
+      background: url(/img/after_accent.svg);
+      width: 112px;
+      height: 4px;
+      bottom: -6px;
+    }
   }
+
   .section_pict {
     border: 3px solid #17171B;
   }
@@ -186,11 +195,17 @@ svg {
     text-align: right;
     right: 38px;
     width: 303px;
+    &::after {
+      right: 0;
+    }
   }
   .anonce__item_second .section__name {
     text-align: left;
     left: 38px;
     width: 204px;
+    &::after {
+      left: 0;
+    }
   }
 }
 
