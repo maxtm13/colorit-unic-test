@@ -14,6 +14,7 @@ $CurUri = $APPLICATION->GetCurUri();
     use Bitrix\Main\Page\Asset;
 
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-grid.min.css');
+//    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/stylesheet.min.css');
     ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
