@@ -220,51 +220,105 @@ $CurUri = $APPLICATION->GetCurUri();
                     ); ?>
                 </div>
                 <div class="col-4 anonce__item anonce__item_main">
-                    <ul class="row anonce__categories_items-top">
-                        <li class="col-4 category__item">
-                            <div class="category__item_title ">Название категории</div>
-                            <img src="#!" alt="name" class="category__item_pict">
-                        </li>
-                        <li class="col-4 category__item">
-                            <div class="category__item_title ">Название категории</div>
-                            <img src="#!" alt="name" class="category__item_pict">
-                        </li>
-                        <li class="col-4 category__item">
-                            <div class="category__item_title ">Название категории</div>
-                            <img src="#!" alt="name" class="category__item_pict">
-                        </li>
-                    </ul>
-                    <div class="row anonce__item_main-center">
-                        <div class="col-12">
-                            <? // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
-                            $APPLICATION->IncludeComponent(
-                                "bitrix:main.include",
-                                ".default",
-                                array(
-                                    "AREA_FILE_SHOW" => "file",
-                                    "AREA_FILE_SUFFIX" => "inc",
-                                    "EDIT_TEMPLATE" => "",
-                                    "COMPONENT_TEMPLATE" => ".default",
-                                    "PATH" => "/includes/logo_big.php"
-                                ),
-                                false
-                            ); ?>
-                        </div>
-                    </div>
-                    <ul class="row anonce__categories_items-bottom">
-                        <li class="col-4 category__item">
-                            <div class="category__item_title ">Название категории</div>
-                            <img src="#!" alt="name" class="category__item_pict">
-                        </li>
-                        <li class="col-4 category__item">
-                            <div class="category__item_title ">Название категории</div>
-                            <img src="#!" alt="name" class="category__item_pict">
-                        </li>
-                        <li class="col-4 category__item">
-                            <div class="category__item_title ">Название категории</div>
-                            <img src="#!" alt="name" class="category__item_pict">
-                        </li>
-                    </ul>
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list", 
+	"fasad_sections", 
+	array(
+		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COUNT_ELEMENTS" => "N",
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+		"FILTER_NAME" => "sectionsFilter",
+		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+		"IBLOCK_ID" => "1",
+		"IBLOCK_TYPE" => "catalog",
+		"SECTION_CODE" => "",
+		"SECTION_FIELDS" => array(
+			0 => "ID",
+			1 => "CODE",
+			2 => "XML_ID",
+			3 => "NAME",
+			4 => "SORT",
+			5 => "DESCRIPTION",
+			6 => "PICTURE",
+			7 => "DETAIL_PICTURE",
+			8 => "IBLOCK_TYPE_ID",
+			9 => "IBLOCK_ID",
+			10 => "IBLOCK_CODE",
+			11 => "IBLOCK_EXTERNAL_ID",
+			12 => "DATE_CREATE",
+			13 => "CREATED_BY",
+			14 => "TIMESTAMP_X",
+			15 => "MODIFIED_BY",
+			16 => "",
+		),
+		"SECTION_ID" => "3",
+		"SECTION_URL" => "",
+		"SECTION_USER_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
+		"SHOW_PARENT_NAME" => "Y",
+		"TOP_DEPTH" => "3",
+		"VIEW_MODE" => "LINE",
+		"COMPONENT_TEMPLATE" => "fasad_sections"
+	),
+	false
+);?>
+
+
+<!--                    <ul class="row anonce__categories_items-top">-->
+<!--                        <li class="col-4 category__item">-->
+<!--                            <div class="category__item_title ">Название категории</div>-->
+<!--                            <img src="#!" alt="name" class="category__item_pict">-->
+<!--                        </li>-->
+<!--                        <li class="col-4 category__item">-->
+<!--                            <div class="category__item_title ">Название категории</div>-->
+<!--                            <img src="#!" alt="name" class="category__item_pict">-->
+<!--                        </li>-->
+<!--                        <li class="col-4 category__item">-->
+<!--                            <div class="category__item_title ">Название категории</div>-->
+<!--                            <img src="#!" alt="name" class="category__item_pict">-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                    <div class="row anonce__item_main-center">-->
+<!--                        <div class="col-12">-->
+<!--                            --><?// // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
+//                            $APPLICATION->IncludeComponent(
+//                                "bitrix:main.include",
+//                                ".default",
+//                                array(
+//                                    "AREA_FILE_SHOW" => "file",
+//                                    "AREA_FILE_SUFFIX" => "inc",
+//                                    "EDIT_TEMPLATE" => "",
+//                                    "COMPONENT_TEMPLATE" => ".default",
+//                                    "PATH" => "/includes/logo_big.php"
+//                                ),
+//                                false
+//                            ); ?>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <ul class="row anonce__categories_items-bottom">-->
+<!--                        <li class="col-4 category__item">-->
+<!--                            <div class="category__item_title ">Название категории</div>-->
+<!--                            <img src="#!" alt="name" class="category__item_pict">-->
+<!--                        </li>-->
+<!--                        <li class="col-4 category__item">-->
+<!--                            <div class="category__item_title ">Название категории</div>-->
+<!--                            <img src="#!" alt="name" class="category__item_pict">-->
+<!--                        </li>-->
+<!--                        <li class="col-4 category__item">-->
+<!--                            <div class="category__item_title ">Название категории</div>-->
+<!--                            <img src="#!" alt="name" class="category__item_pict">-->
+<!--                        </li>-->
+<!--                    </ul>-->
+
+
+
 
                 </div>
 

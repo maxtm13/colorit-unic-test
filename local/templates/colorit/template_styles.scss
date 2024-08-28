@@ -163,10 +163,27 @@ svg {
    .category__item {
     width: 144px;
     height: 199px;
+     position: relative;
     &_pict {
       object-fit: cover;
       object-position: center;
+      //width: 144px;
+      //height: 199px;
     }
+     &_title{
+       position: absolute;
+       //bottom: 50px;
+       top: 113px;
+       text-align: center;
+       left: 0;
+       right: 0;
+       text-transform: uppercase;
+       font-size: 16px;
+       line-height: 1.12;
+       font-weight: 700;
+       width: 113px;
+       margin: 0 auto;
+     }
   }
   .anonce__item {
     position: relative;
@@ -206,6 +223,10 @@ svg {
     &::after {
       left: 0;
     }
+  }
+  .central_icon {
+    padding: 24px 0 20px;
+    text-align: center;
   }
 }
 

@@ -138,10 +138,24 @@ svg {
 .anonce .category__item {
   width: 144px;
   height: 199px;
+  position: relative;
 }
 .anonce .category__item_pict {
   object-fit: cover;
   object-position: center;
+}
+.anonce .category__item_title {
+  position: absolute;
+  top: 113px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.12;
+  font-weight: 700;
+  width: 113px;
+  margin: 0 auto;
 }
 .anonce .anonce__item {
   position: relative;
@@ -180,6 +194,10 @@ svg {
 }
 .anonce .anonce__item_second .section__name::after {
   left: 0;
+}
+.anonce .central_icon {
+  padding: 24px 0 20px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=template_styles.css.map */
