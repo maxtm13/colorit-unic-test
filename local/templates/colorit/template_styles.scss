@@ -12,6 +12,8 @@
 
   $color-1 :#141c20;
   $color-2 :#055b8c;
+  $color-5 : #57656d;
+  $color-7: #f3f7f9;
   $color-white: #FFFFFF;
   $title-color: #5F5E64;
   $main-text-color:#57656D;
@@ -276,8 +278,12 @@ svg {
       //&-link:hover .news-item-title {
       //  color: $color-2;
       //}
+      .news-item-title {
+        color: $color-2
+
+      }
     &:hover .news-item-title {
-      color: $color-2
+      color: $color-1
     }
     }
 
@@ -298,5 +304,130 @@ svg {
     }
   }
 }
+.section__advantages {
+  padding-top: 20px ;
+  margin-bottom: 50px;
+}
+.section__title {
+  margin-bottom: 10px;
+}
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:  24px;
+  .advantages-item {
+    background-color: $color-7;
+    padding: 16px 30px;
+    transition: all 0.3s;
+    position: relative;
+    &:hover {
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.05), 0 8px 8px 0 rgba(0, 0, 0, 0.05), 0 16px 16px 0 rgba(0, 0, 0, 0.05), 0 32px 32px 0 rgba(0, 0, 0, 0.05), 0 0 64px 0 rgba(0, 0, 0, 0.05);
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        //transform: translateY(-100%);
+        background: url("/img/after_accent.svg") no-repeat;
+        background-size: cover;
+      }
+    }
+    &-header {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      margin-bottom: 3px;
 
+      .preview_picture {
+        width: 37px;
+        height: 37px;
+      }
+      .advantages-item-title {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+      }
+
+    }
+    &.-text {
+      font-size: 15px;
+      color: $color-5;
+    }
+  }
+}
+.section__about {
+  .section__wrapper {
+    position: relative;
+    //text-align: right;
+    //margin-left: auto;
+    padding: 15px 0 25px;
+    .section__pict {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      //background-image: linear-gradient(90deg, rgba(255, 255, 255, 0%) 0%,  rgba(255, 255, 255, 0%) 50%, rgba(255, 255, 255, .69) 70.3%, #fff 100%);
+    }
+    .section__title {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 112px;
+        height: 4px;
+        background-image: url(/img/after_accent.svg);
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+
+  }
+
+  .section__content {
+    //position: absolute;
+    width: 903px;
+    margin-left: auto;
+      .section__text {
+        margin-bottom: 18px;
+      }
+      .btn_more {
+        font-weight: 700;
+        font-size: 18px;
+        color: $color-2;
+        position: relative;
+        padding-right: 5px;
+        &::after {
+          position: absolute;
+          content: '';
+          right: 0;
+          bottom: 0;
+          width: 48px;
+          height: 3px;
+          background-image: url("/img/after_accent.svg");
+          -webkit-background-size: contain;
+          background-size: contain;
+          -webkit-transform: translateX(100%) translateY(-5px);
+          -moz-transform: translateX(100%) translateY(-5px);
+          -ms-transform: translateX(100%) translateY(-5px);
+          -o-transform: translateX(100%) translateY(-5px);
+          transform: translateX(100%) translateY(-5px);
+        }
+      }
+
+
+    //top: 15px;
+    //right: 0;
+  }
+
+}
 
