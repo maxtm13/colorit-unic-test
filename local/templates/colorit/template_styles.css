@@ -208,6 +208,30 @@ svg {
 .section__news {
   padding: 30px 0 0;
 }
+.section__news .section__news.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.section__news .btn_text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #055b8c;
+  position: relative;
+  line-height: 1;
+}
+.section__news .btn_text::before {
+  content: "";
+  position: absolute;
+  background: url(/img/after_accent.svg);
+  background-size: contain;
+  width: 48px;
+  height: 3px;
+  bottom: 6px;
+  left: 0;
+  transform: translateX(calc(-100% - 6px));
+}
 .section__news .news-list .news-item {
   position: relative;
 }

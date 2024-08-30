@@ -125,6 +125,7 @@
   transform: translateY(-1px) rotate(-90deg);
   /*transform: ;*/
   transition: transform 0.3s;
+  height: 6px;
 }
 
 #left-menu li ul li {

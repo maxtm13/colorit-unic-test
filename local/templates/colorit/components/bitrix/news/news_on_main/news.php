@@ -41,7 +41,14 @@ endif;
 
 if($res = CIBlock::GetByID($arParams['IBLOCK_ID'])->GetNext())	$nameSection = $res['NAME'];
 ?>
-<h2 class="section__title"><?=$nameSection?></h2>
+<div class="section__news header">
+    <h2 class="section__title"><?=$nameSection?></h2>
+    <div class="section__news_btn">
+        <a href="/news/" class="btn_link">
+            <span class="btn_text">Все новости</span>
+        </a>
+    </div>
+</div>
 <?php
 
 if($arParams["USE_FILTER"]=="Y"):
