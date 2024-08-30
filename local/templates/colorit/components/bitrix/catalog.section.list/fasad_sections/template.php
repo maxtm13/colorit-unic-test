@@ -33,7 +33,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
     $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
     ?>
     <li class="col-4">
-        <div class="category__item">
+        <div class="category__item" id="<?=$this->GetEditAreaId($arSection['ID']);?>">
             <a href="<?= $arSection['SECTION_PAGE_URL'] ?>" class="category__item_link">
                 <div class="category__item_title "><?= $arSection['NAME'] ?></div>
                 <img src="<?= $arSection['PICTURE']['SRC'] ?>" alt="name" class="category__item_pict">
