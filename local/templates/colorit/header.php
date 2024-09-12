@@ -24,6 +24,7 @@ $CurUri = $APPLICATION->GetCurUri();
     <?
     CJSCore::Init(array("jquery3"));
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.min.js');
+    Asset::getInstance()->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=73ca52d4-f222-48f5-99aa-89da6d8dccfa');
     $APPLICATION->ShowHead();
     ?>
     <meta charset="UTF-8">

@@ -13,17 +13,61 @@
 $this->setFrameMode(true);
 ?>
 <div class="section__wrapper">
-    <div class="section__pict" style="background-image: linear-gradient(90deg, rgba(255, 255, 255, 0%) 0%,  rgba(255, 255, 255, 0%) 50%, rgba(255, 255, 255, .69) 70.3%, #fff 100%), url(<?=$arResult['PREVIEW_PICTURE']['SRC']?>);"></div>
-     <div class="section__content">
+    <div class="section__pict"
+         style="background-image: linear-gradient(90deg, rgba(255, 255, 255, 0%) 0%,  rgba(255, 255, 255, 0%) 50%, rgba(255, 255, 255, .69) 70.3%, #fff 100%), url(<?= $arResult['PREVIEW_PICTURE']['SRC'] ?>);"></div>
+    <div class="section__content">
         <h2 class="section__title"><?= $arParams["PAGER_TITLE"] ?></h2>
         <div class="section__text"><?= $arResult['PREVIEW_TEXT'] ?></div>
-         <a href="/about/" class="btn_more">
-             <span class="btn_more">Подробнее</span>
-         </a>
-     </div>
+        <a href="/about/" class="btn_more">
+            <span class="btn_more">Подробнее</span>
+        </a>
+    </div>
 
 </div>
-<?php //pre($arResult)
+
+
+<h2 class="section__title">Главный офис:</h2>
+
+<div class="contacts">
+    <div class='contacts__map' id="map" style="width: 951px; height: 544px"></div>
+    <div class="contacts__info">
+        <h3 class="contacts__info_title">Главный офис:</h3>
+        <div class="contacts__info_wrapper">
+            <div class="contacts__info_address"><?= $arResult['PROPERTIES']['ADDRESS']['VALUE'] ?></div>
+            <div class="contacts__info_items">
+                <div class="contacts__item">
+                    <div class="contact__title">Тел:</div>
+                    <? foreach ($arResult['PROPERTIES']['PHONES']['VALUE'] as $phone) { ?>
+                        <a  class="contact__link" href="tel:<?= preg_replace("/[^0-9]/", '', $phone) ?>">
+                            <?= $phone ?>
+                        </a>
+
+                    <? } ?>
+                </div>
+                <div class="contacts__item">
+                    <div class="contact__title">Часы работы:</div>
+                    <? foreach ($arResult['PROPERTIES']['WORK_HOURS']['VALUE'] as $work) { ?>
+                        <span class="work__time"><?= $work ?></span>
+
+                    <? } ?>
+
+                </div>
+                <div class="contacts__item">
+                    <div class="contact__title">E-mail:</div>
+
+                    <a  class="contact__link" href="mailto:<?= $arResult['PROPERTIES']['EMAIL']['VALUE'] ?>">
+                        <?= $arResult['PROPERTIES']['EMAIL']['VALUE'] ?>
+                    <a>
+
+                </div>
+                <div class="contacts__item"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php //pre($arResult['PROPERTIES'])
 ?>
 <!--<img-->
 <!--        class="preview_picture"-->
@@ -116,3 +160,61 @@ $this->setFrameMode(true);
 //	}
 //	?>
 <!--</div>-->
+
+<script>
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [44.390556, 46.167604],
+            zoom: 6.25,
+            controls: {}
+        }, {
+            searchControlProvider: 'yandex#search'
+        })
+        myMap.behaviors.disable(["scrollZoom", "drag"])
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+            myPlacemark = new ymaps.Placemark([<?=$arResult['ON_MAP'][0]?>, <?=$arResult['ON_MAP'][1]?>], {
+                hintContent: 'Краснодар',
+                // balloonContent: 'Это красивая метка'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/city_mark.png',
+                // Размеры метки.
+                iconImageSize: [40, 40],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-20, -20]
+            }),
+
+            myPlacemarkWithContent = new ymaps.Placemark([<?=$arResult['ON_MAP'][0]?>, <?=$arResult['ON_MAP'][1]?>], {
+                hintContent: 'Главный оффис',
+                // balloonContent: 'А эта — новогодняя',
+                // iconContent: '12'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/map_pin.png',
+                // Размеры метки.
+                iconImageSize: [40, 52],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-20, -52],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [0, -20],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            });
+
+        myMap.geoObjects
+            .add(myPlacemark)
+            .add(myPlacemarkWithContent);
+    });
+</script>
