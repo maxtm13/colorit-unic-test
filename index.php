@@ -188,8 +188,11 @@ $APPLICATION->ShowTitle();
 			2 => "",
 		),
 		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "EMAIL",
+			1 => "ADDRESS",
+			2 => "PHONES",
+			3 => "WORK_HOURS",
+			4 => "",
 		),
 		"IBLOCK_URL" => "",
 		"AJAX_MODE" => "N",

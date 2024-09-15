@@ -25,6 +25,7 @@ $CurUri = $APPLICATION->GetCurUri();
     CJSCore::Init(array("jquery3"));
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.min.js');
     Asset::getInstance()->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=73ca52d4-f222-48f5-99aa-89da6d8dccfa');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.maskedinput.min.js');
     $APPLICATION->ShowHead();
     ?>
     <meta charset="UTF-8">
@@ -98,23 +99,27 @@ $CurUri = $APPLICATION->GetCurUri();
         </div>
         <div class="header__search_wrapper">
             <? $APPLICATION->IncludeComponent(
-                "bitrix:search.title",
-                "",
-                array(
-                    "CATEGORY_0" => array("no"),
-                    "CATEGORY_0_TITLE" => "",
-                    "CHECK_DATES" => "N",
-                    "CONTAINER_ID" => "title-search",
-                    "INPUT_ID" => "title-search-input",
-                    "NUM_CATEGORIES" => "1",
-                    "ORDER" => "date",
-                    "PAGE" => "#SITE_DIR#search/index.php",
-                    "SHOW_INPUT" => "Y",
-                    "SHOW_OTHERS" => "N",
-                    "TOP_COUNT" => "5",
-                    "USE_LANGUAGE_GUESS" => "Y"
-                )
-            ); ?>
+	"bitrix:search.title", 
+	".default", 
+	array(
+		"CATEGORY_0" => array(
+			0 => "no",
+		),
+		"CATEGORY_0_TITLE" => "",
+		"CHECK_DATES" => "N",
+		"CONTAINER_ID" => "title-search",
+		"INPUT_ID" => "title-search-input",
+		"NUM_CATEGORIES" => "1",
+		"ORDER" => "date",
+		"PAGE" => "#SITE_DIR#search/index.php",
+		"SHOW_INPUT" => "Y",
+		"SHOW_OTHERS" => "N",
+		"TOP_COUNT" => "5",
+		"USE_LANGUAGE_GUESS" => "Y",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+); ?>
         </div>
         <div class="header__social_box">
 

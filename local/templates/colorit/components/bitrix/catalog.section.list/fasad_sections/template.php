@@ -11,10 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-echo '<pre>';
-//print_r($arParams["IBLOCK_ID"]);
-echo '</pre>';
+//todo pre
+//echo '<pre>';
+////print_r($arParams["IBLOCK_ID"]);
+//echo '</pre>';
 
 
 $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
@@ -90,7 +90,9 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 
 <? endforeach ?>
 
-<?php echo '<pre>';
-//print_r($arResult['SECTIONS']);
-echo '</pre>';
+<?php
+//todo pre
+//echo '<pre>';
+////print_r($arResult['SECTIONS']);
+//echo '</pre>';
     

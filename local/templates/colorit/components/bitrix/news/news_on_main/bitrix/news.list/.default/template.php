@@ -11,9 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-echo '<pre>';
-//print_r($arResult);
-echo '</pre>';
+//todo pre
+//echo '<pre>';
+////print_r($arResult);
+//echo '</pre>';
 
 ?>
 
