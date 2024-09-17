@@ -58,12 +58,19 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         <?= $arResult["FORM_FOOTER"] ?>
     </div>
 <? if ($arResult["isFormNote"] === "Y"): ?>
-    <div class="form__popup_success">
-        Спасибо, ваша заявка принята!
+
+    <div class="popup form__popup_success" id="form__popup_success" style="display: none; min-width: 500px;">
+        <p>
+            Успешно отправлено.
+        </p>
     </div>
+    <script >
+        Fancybox.show([{ src: "#form__popup_success", type: "inline" }])
+    </script>
+
 <? endif; ?>
 <?php
-// todo Переделать форму
+// todo модалка
 ?>
     <script>
         $(document).ready(function () {

@@ -58,29 +58,36 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                         </div>
                         <div class="section_wrapper">
                             <div class="section_menu">
-                                <?$APPLICATION->IncludeComponent(
+                                <? $APPLICATION->IncludeComponent(
                                     "bitrix:menu",
                                     "main_menu",
                                     array(
+                                        "IS_SEF" => "Y",
+                                        "SEF_BASE_URL" => "/catalog/",
+                                        "SECTION_PAGE_URL" => "#SECTION_CODE#/",
+                                        "DETAIL_PAGE_URL" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+                                        "IBLOCK_TYPE" => "catalog",
+                                        "IBLOCK_ID" => "1",
+                                        "DEPTH_LEVEL" => "1",
+                                        "CACHE_TYPE" => "N",
+                                        "CACHE_TIME" => "3600",
                                         "COMPONENT_TEMPLATE" => "main_menu",
-                                        "ROOT_MENU_TYPE" => "left",
-                                        "MENU_THEME" => "site",
+                                        "ROOT_MENU_TYPE" => "footer1",
                                         "MENU_CACHE_TYPE" => "N",
                                         "MENU_CACHE_TIME" => "3600",
                                         "MENU_CACHE_USE_GROUPS" => "Y",
-                                        "MENU_CACHE_GET_VARS" => array(
-                                        ),
+                                        "MENU_CACHE_GET_VARS" => array(),
                                         "MAX_LEVEL" => "1",
                                         "CHILD_MENU_TYPE" => "left",
-                                        "USE_EXT" => "N",
+                                        "USE_EXT" => "Y",
                                         "DELAY" => "N",
                                         "ALLOW_MULTI_SELECT" => "N"
                                     ),
                                     false
-                                );?>
+                                ); ?>
                             </div>
                             <div class="section_search">
-                                <?$APPLICATION->IncludeComponent(
+                                <? $APPLICATION->IncludeComponent(
                                     "bitrix:search.title",
                                     "visual",
                                     array(
@@ -102,19 +109,26 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <?$APPLICATION->IncludeComponent(
+                <div class="footer__second_section col-sm-2">
+                    <? $APPLICATION->IncludeComponent(
                         "bitrix:menu",
                         "main_menu",
                         array(
+                            "IS_SEF" => "Y",
+                            "SEF_BASE_URL" => "/catalog/",
+                            "SECTION_PAGE_URL" => "#SECTION_CODE#/",
+                            "DETAIL_PAGE_URL" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+                            "IBLOCK_TYPE" => "catalog",
+                            "IBLOCK_ID" => "1",
+                            "DEPTH_LEVEL" => "1",
+                            "CACHE_TYPE" => "N",
+                            "CACHE_TIME" => "3600",
                             "COMPONENT_TEMPLATE" => "main_menu",
                             "ROOT_MENU_TYPE" => "footer2",
-                            "MENU_THEME" => "site",
                             "MENU_CACHE_TYPE" => "N",
                             "MENU_CACHE_TIME" => "3600",
                             "MENU_CACHE_USE_GROUPS" => "Y",
-                            "MENU_CACHE_GET_VARS" => array(
-                            ),
+                            "MENU_CACHE_GET_VARS" => array(),
                             "MAX_LEVEL" => "1",
                             "CHILD_MENU_TYPE" => "left",
                             "USE_EXT" => "N",
@@ -122,10 +136,67 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                             "ALLOW_MULTI_SELECT" => "N"
                         ),
                         false
-                    );?>
+                    ); ?>
                 </div>
-                <div class="col-sm-2">socials</div>
-                <div class="col-sm-4">subscribe</div>
+                <div class="footer__third_section col-sm-2">
+                    <div class="footer__social_box">
+                        <div class="footer__social_box_title">Мы в соцсетях</div>
+                        <div class="footer__social_box_link">
+                            <? $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/includes/socials.php"
+                                )
+                            ); ?>
+                        </div>
+
+                    </div>
+                    <div class="footer__phone">
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/includes/phone.php"
+                            )
+                        ); ?>
+                    </div>
+                    <div class="footer__address">
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/includes/address.php"
+                            )
+                        ); ?>
+                    </div>
+
+
+                </div>
+                <div class="footer__fourth_section col-sm-4">
+                    <div class="subscribe__box">
+                        <?$APPLICATION->IncludeComponent(
+                            "maxtm1:newsletter.subscription",
+                            "",
+                            Array(
+                                "BUTTON" => "Подписаться",
+                                "POLICY" => "/policy/",
+                                "SUBTITLE" => "Мы регулярно публикуем новую и интересную информацию, акции и специальные предложения",
+                                "TITLE" => "Подпишитесь на рассылку"
+                            )
+                        );?>
+                    </div>
+
+                </div>
             </div>
         </div>
 

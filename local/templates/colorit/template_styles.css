@@ -8,7 +8,7 @@
 7: #f3f7f9;
 8: #e4e4e4;
 */
-ul, p, *, ::after, ::before {
+ul, p, *, ::after, ::before, input[type=checkbox], label {
   margin: 0;
   padding: 0;
 }
@@ -438,13 +438,16 @@ svg {
   background-position: center center;
   background-size: 50% 50%;
 }
+.section__form .form__checkbox label {
+  font-weight: 400;
+}
 .section__form .form__checkbox input[type=checkbox]:checked + label::after {
   content: "";
   display: inline-block;
   position: absolute;
   width: 8px;
   height: 8px;
-  margin-left: 4px;
+  margin-left: 3px;
   background-color: #055b8c;
 }
 .section__form .form__btn button {
@@ -467,6 +470,64 @@ svg {
 .footer .footer__top .footer__first_section {
   display: flex;
   justify-content: flex-start;
+  gap: 13px;
+}
+.footer .footer__top .footer__first_section .section_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer .footer__top .footer__first_section .section_wrapper .section_menu {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer .footer__top .footer__first_section .section_wrapper .section_menu .left-menu li {
+  margin-bottom: 14px;
+}
+.footer .footer__top .footer__first_section .bx-form-control,
+.footer .footer__top .footer__first_section .bx-input-group-btn {
+  background: #6f6e74;
+  border: none;
+  height: 40px;
+  color: #ffffff;
+}
+.footer .footer__top .footer__first_section .bx-input-group-btn button {
+  background: #6f6e74;
+}
+.footer .footer__top .footer__second_section {
+  text-transform: uppercase;
+}
+.footer .footer__top .footer__second_section .left-menu li {
+  margin-bottom: 15px;
+}
+.footer .footer__top .footer__third_section .footer__social_box {
+  margin-bottom: 30px;
+}
+.footer .footer__top .footer__third_section .footer__social_box_title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+.footer .footer__top .footer__third_section .footer__social_box_link {
+  display: flex;
+  gap: 14px;
+}
+.footer .footer__top .footer__third_section .footer__social_box_link .social_link svg {
+  fill: #ffffff;
+}
+.footer .footer__top .footer__third_section .footer__social_box_link .social_link.telegram svg g path:nth-last-child(1) {
+  stroke: #ffffff;
+}
+.footer .footer__top .footer__third_section .footer__social_box_link .social_link:hover svg {
+  fill: #055B8C;
+}
+.footer .footer__top .footer__third_section .footer__social_box_link .social_link.telegram:hover svg > g > path:last-child {
+  stroke: #055B8C;
+}
+.footer .footer__top .footer__phone {
+  font-weight: 800;
+  font-size: 20px;
+  color: #bbe6ff;
 }
 .footer .footer__bottom {
   padding: 15px 0;
@@ -475,6 +536,22 @@ svg {
 .footer .footer__bottom .footer__bottom_inner {
   display: flex;
   justify-content: space-between;
+}
+
+.popup {
+  padding: 70px 38px;
+}
+.popup h4 {
+  font-weight: 500;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #202125;
+}
+.popup p {
+  text-align: center;
+  font-size: 19px;
+  color: #57656d;
 }
 
 /*# sourceMappingURL=template_styles.css.map */

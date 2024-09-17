@@ -12,6 +12,7 @@
 
   $color-1 : #141c20;
   $color-2 : #055b8c;
+  $color-3 : #ffffff;
   $color-5 : #57656d;
   $color-6 : #b9c6cd;
   $color-7 : #f3f7f9;
@@ -23,12 +24,12 @@
   $background-light: #E4E4E4;
 
   //5F5E64
-ul, p , *, ::after, ::before {
+ul, p , *, ::after, ::before, input[type="checkbox"], label {
   margin: 0;
   padding: 0;
 }
 
-body {
+body,  {
   padding: 0;
   margin: 0;
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -128,7 +129,7 @@ svg {
       display: block;
     }
   }
-  &__social_box {
+  &__social_box{
     display: flex;
     gap: 14px;
     .social_link svg{
@@ -491,6 +492,9 @@ svg {
       }
 
     }
+     label {
+       font-weight: 400;
+     }
   }
   .form__checkbox input[type=checkbox]:checked+label::after {
     content: '';
@@ -498,7 +502,7 @@ svg {
     position: absolute;
     width: 8px;
     height: 8px;
-    margin-left: 4px;
+    margin-left: 3px;
     background-color: $color-2;
   }
   .form__btn button {
@@ -520,6 +524,73 @@ svg {
     .footer__first_section {
       display: flex;
       justify-content: flex-start;
+      gap: 13px;
+      .section_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .section_menu {
+          font-weight: 700;
+          text-transform: uppercase;
+          .left-menu li {
+            margin-bottom: 14px;
+          }
+        }
+      }
+      .bx-form-control,
+      .bx-input-group-btn {
+       background: #6f6e74;
+        border: none;
+        height: 40px;
+        color: $color-3;
+      }
+      .bx-input-group-btn button {
+        background: #6f6e74;
+
+      }
+    }
+    .footer__second_section {
+      text-transform: uppercase;
+      .left-menu li {
+        margin-bottom: 15px;
+      }
+    }
+    .footer__third_section {
+      .footer__social_box {
+        margin-bottom: 30px;
+      }
+      .footer__social_box_title{
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 9px;
+      }
+      .footer__social_box_link {
+        display: flex;
+        gap: 14px;
+
+        .social_link svg{
+          fill: #ffffff;
+
+
+        }
+        .social_link.telegram svg g path:nth-last-child(1) {
+
+            stroke: #ffffff;
+
+        }
+        .social_link:hover svg{
+          fill: $text-accent;
+        }
+        .social_link.telegram:hover svg>g>path:last-child{
+          stroke: $text-accent;
+
+        }
+      }
+    }
+    .footer__phone {
+      font-weight: 800;
+      font-size: 20px;
+      color: #bbe6ff;
     }
   }
   .footer__bottom {
@@ -531,4 +602,22 @@ svg {
     }
 
   }
+}
+
+.popup {
+  padding:70px 38px ;
+  h4 {
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #202125;
+  }
+  p {
+    text-align: center;
+    font-size: 19px;
+    color: $color-5;
+
+  }
+
 }
