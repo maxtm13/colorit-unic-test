@@ -2,7 +2,6 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->ShowTitle();
 ?>
-
 <section class="section__news">
     <div class="container">
         <?

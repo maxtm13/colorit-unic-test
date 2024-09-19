@@ -4,6 +4,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 $CurDir = $APPLICATION->GetCurDir();
 $CurUri = $APPLICATION->GetCurUri();
+$ID = 14;
+if(CModule::IncludeModule('iblock') && ($arIBlockElement = GetIBlockElement($ID, 'content')));
+$address = $arIBlockElement['PROPERTIES']['ADDRESS']['VALUE'];
+$phone = $arIBlockElement['PROPERTIES']['PHONES']['VALUE'][0];
+unset($arIBlockElement);
+
 ?>
 
 <!doctype html>
@@ -191,16 +197,8 @@ $CurUri = $APPLICATION->GetCurUri();
         </div>
         <div class="header__callback">
             <p class="header__phone">
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:main.include",
-                    "",
-                    array(
-                        "AREA_FILE_SHOW" => "file",
-                        "AREA_FILE_SUFFIX" => "inc",
-                        "EDIT_TEMPLATE" => "",
-                        "PATH" => "/includes/phone.php"
-                    )
-                ); ?>
+                <a href="<?=preg_replace('/[^0-9]/', '',$phone)  ?>" ><?=$phone ?></a>
+
 
 
 
@@ -428,8 +426,22 @@ $CurUri = $APPLICATION->GetCurUri();
             </div>
         </div>
     </section>
+    <? else : ?>
+        <div class="breadcrumb container">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "",
+            array(
+                "PATH" => "",
+                "SITE_ID" => "s1",
+                "START_FROM" => "0"
+            )
+        );
 
+    ?>
+        </div>
 <? endif ?>
+
 
 
 

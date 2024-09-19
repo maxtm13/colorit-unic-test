@@ -1,11 +1,8 @@
 <?php
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); // Проверка на подключение ядра
 use Bitrix\Main\Loader;
-AddEventHandler('subscribe', 'OnStartSubscriptionAdd', 'myFunc');
-function myFunc() {
-    $script =  'Fancybox.show([{ src: "#notif_subscribe", type: "inline" }]);';
-    echo "<script> {$script} </script>";
-}
+AddEventHandler('subscribe', 'OnStartSubscriptionAdd', 'getPopup');
+
 
 // Подключаем модули
 Loader::includeModule('subscribe'); // Подключаем модуль Подписка, рассылки

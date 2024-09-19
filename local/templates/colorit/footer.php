@@ -3,8 +3,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 ?>
+<h1>Футер</h1>
 <section class="section__form">
-
     <div class="container">
         <? $APPLICATION->IncludeComponent(
             "maxtm1:form.result.new",
@@ -156,28 +156,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
                     </div>
                     <div class="footer__phone">
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:main.include",
-                            "",
-                            array(
-                                "AREA_FILE_SHOW" => "file",
-                                "AREA_FILE_SUFFIX" => "inc",
-                                "EDIT_TEMPLATE" => "",
-                                "PATH" => "/includes/phone.php"
-                            )
-                        ); ?>
+                        <a href="<?=preg_replace('/[^0-9]/', '',$phone)  ?>" ><?=$phone ?></a>
                     </div>
                     <div class="footer__address">
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:main.include",
-                            "",
-                            array(
-                                "AREA_FILE_SHOW" => "file",
-                                "AREA_FILE_SUFFIX" => "inc",
-                                "EDIT_TEMPLATE" => "",
-                                "PATH" => "/includes/address.php"
-                            )
-                        ); ?>
+                        <?=$address?>
                     </div>
 
 
@@ -185,15 +167,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                 <div class="footer__fourth_section col-sm-4">
                     <div class="subscribe__box">
                         <?$APPLICATION->IncludeComponent(
-                            "maxtm1:newsletter.subscription",
-                            "",
-                            Array(
-                                "BUTTON" => "Подписаться",
-                                "POLICY" => "/policy/",
-                                "SUBTITLE" => "Мы регулярно публикуем новую и интересную информацию, акции и специальные предложения",
-                                "TITLE" => "Подпишитесь на рассылку"
-                            )
-                        );?>
+	"maxtm1:newsletter.subscription", 
+	".default", 
+	array(
+		"BUTTON" => "Подписаться",
+		"POLICY" => "/policy/",
+		"SUBTITLE" => "",
+		"TITLE" => "Подпишитесь на рассылку",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?>
                     </div>
 
                 </div>

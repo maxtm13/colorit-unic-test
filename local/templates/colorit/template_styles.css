@@ -131,6 +131,10 @@ svg {
   color: #055b8c;
 }
 
+.breadcrumb {
+  background: none;
+}
+
 .anonce {
   background-color: #5F5E64;
   padding: 47px 0 48px;
