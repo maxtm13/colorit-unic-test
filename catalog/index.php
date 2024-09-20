@@ -1,15 +1,13 @@
-<?php
-
+<?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Title");
-?><div class="container">
-
-	 <?$APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("Продукция");
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	".default", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -35,6 +33,8 @@ $APPLICATION->SetTitle("Title");
 		"DETAIL_DISPLAY_NAME" => "Y",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"DETAIL_IMAGE_RESOLUTION" => "16by9",
+		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
+		),
 		"DETAIL_META_DESCRIPTION" => "-",
 		"DETAIL_META_KEYWORDS" => "-",
 		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
@@ -59,6 +59,8 @@ $APPLICATION->SetTitle("Title");
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"INSTANT_RELOAD" => "N",
+		"LABEL_PROP" => array(
+		),
 		"LAZY_LOAD" => "N",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
@@ -66,8 +68,14 @@ $APPLICATION->SetTitle("Title");
 		"LINK_IBLOCK_TYPE" => "",
 		"LINK_PROPERTY_SID" => "",
 		"LIST_BROWSER_TITLE" => "-",
+		"LIST_ENLARGE_PRODUCT" => "STRICT",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
+		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"LIST_SHOW_SLIDER" => "Y",
+		"LIST_SLIDER_INTERVAL" => "3000",
+		"LIST_SLIDER_PROGRESS" => "N",
 		"LOAD_ON_SCROLL" => "N",
 		"MESSAGE_404" => "",
 		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
@@ -109,7 +117,7 @@ $APPLICATION->SetTitle("Title");
 		"SEF_FOLDER" => "/catalog/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_STATUS_404" => "y",
+		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
 		"SHOW_DEACTIVATED" => "N",
@@ -125,7 +133,13 @@ $APPLICATION->SetTitle("Title");
 		"TOP_ELEMENT_SORT_FIELD2" => "id",
 		"TOP_ELEMENT_SORT_ORDER" => "asc",
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
+		"TOP_ENLARGE_PRODUCT" => "STRICT",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
+		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"TOP_SHOW_SLIDER" => "Y",
+		"TOP_SLIDER_INTERVAL" => "3000",
+		"TOP_SLIDER_PROGRESS" => "N",
 		"TOP_VIEW_MODE" => "SECTION",
 		"USER_CONSENT" => "N",
 		"USER_CONSENT_ID" => "0",
@@ -140,23 +154,6 @@ $APPLICATION->SetTitle("Title");
 		"USE_PRODUCT_QUANTITY" => "N",
 		"USE_STORE" => "N",
 		"COMPONENT_TEMPLATE" => ".default",
-		"ADD_PICT_PROP" => "-",
-		"LABEL_PROP" => array(
-		),
-		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
-		"TOP_ENLARGE_PRODUCT" => "STRICT",
-		"TOP_SHOW_SLIDER" => "Y",
-		"TOP_SLIDER_INTERVAL" => "3000",
-		"TOP_SLIDER_PROGRESS" => "N",
-		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
-		"LIST_ENLARGE_PRODUCT" => "STRICT",
-		"LIST_SHOW_SLIDER" => "Y",
-		"LIST_SLIDER_INTERVAL" => "3000",
-		"LIST_SLIDER_PROGRESS" => "N",
-		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(
-		),
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE#/",
@@ -171,7 +168,4 @@ $APPLICATION->SetTitle("Title");
 		)
 	),
 	false
-);?><br>
- <br>
-</div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

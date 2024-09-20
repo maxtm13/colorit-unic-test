@@ -3,6 +3,7 @@ ErrorDocument 404 /404.php
 
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
+
   RewriteEngine On
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
@@ -24,3 +25,4 @@ ErrorDocument 404 /404.php
   ExpiresByType text/css "access plus 3 day"
   ExpiresByType application/javascript "access plus 3 day"  
 </IfModule>
+Redirect 301 /var/ /free/

@@ -1,27 +1,19 @@
 <?php
 $arUrlRewrite=array (
-  0 => 
-  array (
-    'CONDITION' => '#^\\/?\\/mobileapp/jn\\/(.*)\\/.*#',
-    'RULE' => 'componentName=$1',
-    'ID' => NULL,
-    'PATH' => '/bitrix/services/mobileapp/jn.php',
-    'SORT' => 100,
-  ),
   1 => 
   array (
-    'CONDITION' => '#^/rest/#',
+    'CONDITION' => '#^/catalog/#',
     'RULE' => '',
-    'ID' => NULL,
-    'PATH' => '/bitrix/services/rest/index.php',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
-  2 => 
+  0 => 
   array (
-    'CONDITION' => '#^#',
+    'CONDITION' => '#^/news/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/catalog/new.php',
+    'PATH' => '/index.php',
     'SORT' => 100,
   ),
 );

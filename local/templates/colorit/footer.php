@@ -3,7 +3,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 ?>
-<h1>Футер</h1>
 <section class="section__form">
     <div class="container">
         <? $APPLICATION->IncludeComponent(
