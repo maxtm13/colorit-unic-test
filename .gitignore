@@ -2,3 +2,4 @@
 /bitrix/templates
 /upload
 /bitrix/.settings.php
+/bitrix/**/*

@@ -61,6 +61,8 @@ if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
 		);
 	?></a></h1><?
 }
+
+
 if (0 < $arResult["SECTIONS_COUNT"])
 {
 ?>

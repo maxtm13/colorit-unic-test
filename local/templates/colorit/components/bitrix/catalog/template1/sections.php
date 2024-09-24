@@ -16,6 +16,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 $this->addExternalCss("/bitrix/css/main/bootstrap.css");
 
+
 $sectionListParams = array(
 	"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 	"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -40,12 +41,25 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y")
 }
 $APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
-	"",
+	"catalog_sections",
 	$sectionListParams,
 	$component,
 	($arParams["SHOW_TOP_ELEMENTS"] !== "N" ? array("HIDE_ICONS" => "Y") : array())
 );
 unset($sectionListParams);
+// Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
+$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => ".default",
+		"PATH" => "/includes/catalog_description.php"
+	),
+	false
+);
 
 if ($arParams["USE_COMPARE"] === "Y")
 {

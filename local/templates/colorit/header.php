@@ -63,23 +63,24 @@ unset($arIBlockElement);
         </div>
         <nav class="header__menu">
             <? $APPLICATION->IncludeComponent(
-                "bitrix:menu",
-                "main_menu",
-                array(
-                    "ALLOW_MULTI_SELECT" => "N",
-                    "CHILD_MENU_TYPE" => "left_infoblock",
-                    "DELAY" => "N",
-                    "MAX_LEVEL" => "3",
-                    "MENU_CACHE_GET_VARS" => array(),
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_TYPE" => "N",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "ROOT_MENU_TYPE" => "top",
-                    "USE_EXT" => "Y",
-                    "COMPONENT_TEMPLATE" => "main_menu"
-                ),
-                false
-            ); ?>
+	"bitrix:menu", 
+	"main_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "main_menu"
+	),
+	false
+); ?>
 
 
         </nav>
@@ -429,14 +430,16 @@ unset($arIBlockElement);
     <? else : ?>
         <div class="breadcrumb container">
         <?$APPLICATION->IncludeComponent(
-            "bitrix:breadcrumb",
-            "",
-            array(
-                "PATH" => "",
-                "SITE_ID" => "s1",
-                "START_FROM" => "0"
-            )
-        );
+	"bitrix:breadcrumb", 
+	"universal", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "universal"
+	),
+	false
+);
 
     ?>
         </div>

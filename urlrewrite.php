@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  1 => 
+  7 => 
   array (
     'CONDITION' => '#^/catalog/#',
     'RULE' => '',
@@ -8,12 +8,20 @@ $arUrlRewrite=array (
     'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
-  0 => 
+  4 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/index.php',
+    'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  6 => 
+  array (
+    'CONDITION' => '#^/prod/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/prod/index.php',
     'SORT' => 100,
   ),
 );
