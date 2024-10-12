@@ -5,6 +5,14 @@ $APPLICATION->SetTitle("");
 $APPLICATION->ShowTitle();
 ?><section class="section__news">
 <div class="container">
+ <div class="section__news header">
+  <h2 class="section__title">Новости</h2>
+  <div class="section__news_btn">
+   <a href="/news/" class="btn_link">
+    <span class="btn_text">Все новости</span>
+   </a>
+  </div>
+ </div>
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"news_on_main",

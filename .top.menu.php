@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"готовые проекты", 
-		"", 
+		"/projects/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -38,13 +38,6 @@ $aMenuLinks = Array(
 	Array(
 		"Где Купить", 
 		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"prod", 
-		"/prod/", 
 		Array(), 
 		Array(), 
 		"" 

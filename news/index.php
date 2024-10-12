@@ -1,15 +1,15 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
 ?>
+    <section class="news">
+        <div class="container">
 
-<div class="container">
-
-	<?$APPLICATION->IncludeComponent(
+            <? $APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"main", 
 	array(
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "main",
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "2",
 		"NEWS_COUNT" => "20",
@@ -88,6 +88,9 @@ $APPLICATION->SetTitle("Новости");
 		"SET_STATUS_404" => "N",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
+		"TEMPLATE_THEME" => "blue",
+		"LIST_USE_SHARE" => "",
+		"SLIDER_PROPERTY" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -95,8 +98,9 @@ $APPLICATION->SetTitle("Новости");
 		)
 	),
 	false
-);?>
+); ?>
 
-</div>
+        </div>
+    </section>
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

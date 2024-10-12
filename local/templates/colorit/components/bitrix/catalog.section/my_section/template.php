@@ -25,6 +25,8 @@ use Bitrix\Catalog\ProductTable;
 $this->setFrameMode(true);
 $this->addExternalCss('/bitrix/css/main/bootstrap.css');
 
+
+
 if (!empty($arResult['NAV_RESULT']))
 {
 	$navParams =  array(
@@ -808,4 +810,4 @@ $signedParams = $signer->sign(base64_encode(serialize($arResult['ORIGINAL_PARAME
 		container: '<?=$containerName?>'
 	});
 </script>
-<!-- component-end -->
+<!-- component-end rrr -->

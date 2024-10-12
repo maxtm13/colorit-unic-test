@@ -43,19 +43,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
                                         style="float:left"
                                     /></a>
                             </div>
-<!--                        --><?// else: ?>
-<!--                            <img-->
-<!--                                class="preview_picture"-->
-<!--                                border="0"-->
-<!--                                src="--><?php //= $arItem["PREVIEW_PICTURE"]["SRC"] ?><!--"-->
-<!--                                width="--><?php //= $arItem["PREVIEW_PICTURE"]["WIDTH"] ?><!--"-->
-<!--                                height="--><?php //= $arItem["PREVIEW_PICTURE"]["HEIGHT"] ?><!--"-->
-<!--                                alt="--><?php //= $arItem["PREVIEW_PICTURE"]["ALT"] ?><!--"-->
-<!--                                title="--><?php //= $arItem["PREVIEW_PICTURE"]["TITLE"] ?><!--"-->
-<!--                                style="float:left"-->
-<!--                            />-->
-<!--                        --><?// endif; ?>
-<!--                    --><?// endif ?>
+
                     <? if ($arParams["DISPLAY_DATE"] != "N" && $arItem["DISPLAY_ACTIVE_FROM"]): ?>
                         <span class="news-date-time"><? echo $arItem["DISPLAY_ACTIVE_FROM"] ?></span>
                     <? endif ?>
@@ -64,7 +52,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_TH
 
                     <? endif; ?>
                     <? if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arItem["PREVIEW_TEXT"]): ?>
-                        <p class="news-item-text"><? echo $arItem["PREVIEW_TEXT"]; ?> </p>
+                        <p class="news-item-text"><? echo mb_strlen($arItem["PREVIEW_TEXT"])>120 ? mb_substr($arItem["PREVIEW_TEXT"], 0 , 120).'...' : $arItem["PREVIEW_TEXT"] ; ?> </p>
                     <? endif; ?>
                     <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
                         <!--			<div style="clear:both"></div>-->

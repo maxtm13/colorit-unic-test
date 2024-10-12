@@ -646,6 +646,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 								id="set_filter"
 								name="set_filter"
 								value="<?=GetMessage("CT_BCSF_SET_FILTER")?>"
+								style="display: none"
 							/>
 							<input
 								class="btn btn-link"

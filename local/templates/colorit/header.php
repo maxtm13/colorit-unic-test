@@ -219,34 +219,39 @@ unset($arIBlockElement);
                     //                $GLOBALS['sectionsFilter'] = ["SECTION_ID"=>3];
                     //                $sectionsFilter= ["ID"=>3];
                     $APPLICATION->IncludeComponent(
-                        "maxtm1:catalog.section.list",
-                        "section_pict",
-                        array(
-                            "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-                            "ADD_SECTIONS_CHAIN" => "Y",
-                            "CACHE_FILTER" => "N",
-                            "CACHE_GROUPS" => "Y",
-                            "CACHE_TIME" => "36000000",
-                            "CACHE_TYPE" => "A",
-                            "COUNT_ELEMENTS" => "N",
-                            "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-                            "FILTER_NAME" => "sectionsFilter",
-                            "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
-                            "IBLOCK_ID" => "1",
-                            "IBLOCK_TYPE" => "catalog",
-                            "SECTION_CODE" => "asady-dlya-kukhonnykh-moduley",
-                            "SECTION_FIELDS" => array(
-                                0 => "PICTURE",
-                                1 => "",
-                            ),
-                            "SECTION_ID" => '3',
-                            "SECTION_URL" => "",
-                            "SECTION_USER_FIELDS" => array("", ""),
-                            "SHOW_PARENT_NAME" => "Y",
-                            "TOP_DEPTH" => "2",
-                            "VIEW_MODE" => "LINE"
-                        )
-                    ); ?>
+	"maxtm1:catalog.section.list", 
+	"section_pict", 
+	array(
+		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COUNT_ELEMENTS" => "N",
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+		"FILTER_NAME" => "sectionsFilter",
+		"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+		"IBLOCK_ID" => "1",
+		"IBLOCK_TYPE" => "catalog",
+		"SECTION_CODE" => "asady-dlya-kukhonnykh-moduley",
+		"SECTION_FIELDS" => array(
+			0 => "PICTURE",
+			1 => "",
+		),
+		"SECTION_ID" => "3",
+		"SECTION_URL" => "",
+		"SECTION_USER_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
+		"SHOW_PARENT_NAME" => "Y",
+		"TOP_DEPTH" => "2",
+		"VIEW_MODE" => "LINE",
+		"COMPONENT_TEMPLATE" => "section_pict"
+	),
+	false
+); ?>
                 </div>
                 <div class="col-4 anonce__item anonce__item_main">
                     <?$APPLICATION->IncludeComponent(
@@ -428,7 +433,7 @@ unset($arIBlockElement);
         </div>
     </section>
     <? else : ?>
-        <div class="breadcrumb container">
+        <div class="breadcrumb container" id="navigation" >
         <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb", 
 	"universal", 
@@ -436,7 +441,8 @@ unset($arIBlockElement);
 		"PATH" => "",
 		"SITE_ID" => "s1",
 		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "universal"
+		"COMPONENT_TEMPLATE" => "universal",
+//        "AJAX_MODE" => "Y",
 	),
 	false
 );

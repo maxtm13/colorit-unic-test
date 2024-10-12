@@ -1,1 +1,0 @@
-/var/www/colorit_unic_usr/data/www/colorit.unic-test.ru/bitrix/modules/sale/install/components/bitrix/sale.personal.order/templates/.default/bitrix//var/www/colorit_unic_usr/data/www/colorit.unic-test.ru/bitrix/components/bitrix/sale.personal.order/templates/.default/bitrix/

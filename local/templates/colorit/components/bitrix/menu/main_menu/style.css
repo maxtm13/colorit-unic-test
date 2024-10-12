@@ -121,6 +121,10 @@
   /*color:inherit;*/
 }
 
+#left-menu a:hover {
+  color: #ffffff;
+}
+
 #left-menu li.parent svg {
   transform: translateY(-1px) rotate(-90deg);
   /*transform: ;*/
