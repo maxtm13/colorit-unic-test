@@ -16,9 +16,7 @@ unset($arIBlockElement);
 <html xml:lang="<?= LANGUAGE_ID ?>" lang="<?= LANGUAGE_ID ?>">
 <head>
     <?
-
     use Bitrix\Main\Page\Asset;
-
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-grid.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/js/fancybox/fancybox.min.css');
 //    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/stylesheet.min.css');

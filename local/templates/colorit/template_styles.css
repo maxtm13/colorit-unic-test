@@ -35,13 +35,17 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+a:active,
+a:focus {
   color: inherit;
   text-decoration: none;
   height: 100%;
   transition: color 0.1s;
 }
-a:hover {
+a:hover,
+a:active:hover,
+a:focus:hover {
   text-decoration: none;
 }
 
@@ -1103,6 +1107,10 @@ svsg {
 .about .prev {
   border-left: 15px solid #055b8c;
   margin-left: 10px;
+}
+
+#about-map {
+  height: 544px;
 }
 
 /*# sourceMappingURL=template_styles.css.map */

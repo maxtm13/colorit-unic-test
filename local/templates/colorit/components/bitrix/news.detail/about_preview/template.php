@@ -86,7 +86,8 @@ $this->setFrameMode(true);
             myPlacemark = new ymaps.Placemark([<?=$arResult['ON_MAP'][0]?>, <?=$arResult['ON_MAP'][1]?>], {
                 hintContent: 'Краснодар',
                 // balloonContent: 'Это красивая метка'
-            }, {
+            },
+            {
                 // Опции.
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
@@ -103,7 +104,8 @@ $this->setFrameMode(true);
                 hintContent: 'Главный оффис',
                 // balloonContent: 'А эта — новогодняя',
                 // iconContent: '12'
-            }, {
+            },
+            {
                 // Опции.
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#imageWithContent',
