@@ -22,7 +22,7 @@ $this->SetViewTarget("map", 1);
 
 </div>
 <script>
-    let ID= null;
+    let ID = null;
     ymaps.ready(function () {
         var myMap = new ymaps.Map('about-map', {
             center: [52.521988, 48.905297],

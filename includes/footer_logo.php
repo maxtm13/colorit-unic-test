@@ -1,1 +1,1 @@
-<img alt="footer_logo.png" src="/upload/medialibrary/59c/ihusotigf7ap3nknmb2c9ngql7j9mopo.png" title="footer_logo.png"><br>
+<a href="/"><img alt="footer_logo.png" src="/upload/medialibrary/59c/ihusotigf7ap3nknmb2c9ngql7j9mopo.png" title="footer_logo.png"></a><br>

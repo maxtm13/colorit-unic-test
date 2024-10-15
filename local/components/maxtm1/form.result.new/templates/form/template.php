@@ -64,6 +64,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             Успешно отправлено.
         </p>
     </div>
+
     <script >
         Fancybox.show([{ src: "#form__popup_success", type: "inline" }])
     </script>

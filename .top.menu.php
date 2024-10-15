@@ -37,7 +37,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Где Купить", 
-		"", 
+		"/dilers/", 
 		Array(), 
 		Array(), 
 		"" 

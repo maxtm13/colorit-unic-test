@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("Новости");
 		"SET_TITLE" => "Y",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
-		"ADD_ELEMENT_CHAIN" => "Y",
+		"ADD_ELEMENT_CHAIN" => "N",
 		"USE_PERMISSIONS" => "N",
 		"STRICT_SECTION_CHECK" => "N",
 		"DISPLAY_DATE" => "Y",

@@ -40,7 +40,7 @@ $APPLICATION->SetTitle("О компании");
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_URL" => "",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
