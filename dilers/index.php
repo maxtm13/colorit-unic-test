@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Где купить");
 ?><section class="about">
 <div class="container">
 	<h1><? $APPLICATION->ShowTitle();?></h1>
-	<div class="row">
+	<div class="dilers_map row">
 		<div class="about-map col-md-8">
 			 <? $APPLICATION->ShowViewContent("map"); ?>
 		</div>
@@ -112,7 +112,7 @@ $APPLICATION->SetTitle("Где купить");
 	),
 	false
 );?>
-	<div class="row">
+	<div class="main_office row">
 		<?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail", 
 	"main_office", 

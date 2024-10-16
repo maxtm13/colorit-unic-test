@@ -26,7 +26,7 @@ $props = $arResult['DISPLAY_PROPERTIES'];
                     <div class="col-md-6">
                         <div class="phone">
                             <? if (!empty($props['PHONES']['VALUE'])) { ?>
-                                <p class="contact-item"><?= $props['PHONES']['NAME'] ?>:<br>
+                                <p class="contact-item"><b><?= $props['PHONES']['NAME'] ?>:</b> <br>
                                     <? foreach ($props['PHONES']['VALUE'] as $phoneValue) { ?>
                                         <span class="value">
                                     <?= $phoneValue ?>
@@ -42,7 +42,7 @@ $props = $arResult['DISPLAY_PROPERTIES'];
                         </div>
                         <div class="email">
                             <? if (!empty($props['EMAIL'])) { ?>
-                                <p class="contact-item"><?= $props['EMAIL']['NAME'] ?>:<br>
+                                <p class="contact-item"><b><?= $props['EMAIL']['NAME'] ?>:</b><br>
                                     <?= $props['EMAIL']['VALUE'] ?>
                                 </p>
 
@@ -52,7 +52,7 @@ $props = $arResult['DISPLAY_PROPERTIES'];
                     <div class="col-md-6">
                         <div class="work_hours">
                             <? if (!empty($props['WORK_HOURS'])) { ?>
-                                <p class="contact-item"><?= $props['WORK_HOURS']['NAME'] ?>: <br>
+                                <p class="contact-item"><b><?= $props['WORK_HOURS']['NAME'] ?>: </b> <br>
                                     <? foreach ($props['WORK_HOURS']['VALUE'] as $value) { ?>
                                         <span class="value"><?= $value ?></span><br>
 
@@ -66,7 +66,7 @@ $props = $arResult['DISPLAY_PROPERTIES'];
                 </div>
             </div>
             <div class="col-md-6 offset-md-1">
-                <img src="<?= $props['PHOTO_OFFICE']['FILE_VALUE']['SRC'] ?>" alt="" class="main-office-pict">
+                <img src="<?= $props['PHOTO_OFFICE']['FILE_VALUE']['SRC'] ?>" alt="photo_ofice" class="main-office-pict">
             </div>
         </div>
     </div>

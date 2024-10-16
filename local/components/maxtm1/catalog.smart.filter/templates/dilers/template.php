@@ -26,7 +26,7 @@ if (isset($templateData['TEMPLATE_THEME']))
 <div class="smart-filter mb-4 <?=$templateData["TEMPLATE_CLASS"]?> <?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL") echo "smart-filter-horizontal"?>">
 	<div class="smart-filter-section">
 
-		<div class="smart-filter-title"><?echo GetMessage("CT_BCSF_FILTER_TITLE")?></div>
+
 
 		<form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smart-filter-form">
 
@@ -66,9 +66,9 @@ if (isset($templateData['TEMPLATE_THEME']))
 						?>
 
 						<div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-12<?endif?> mb-2 smart-filter-parameters-box bx-active">
-							<div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+							<div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)" style="display: none">
 								<span class="smart-filter-container-modef"></span>
-								<span class="smart-filter-parameters-box-title-text"><?=$arItem["NAME"]?></span>
+<!--								<span class="smart-filter-parameters-box-title-text">--><?php //=$arItem["NAME"]?><!--</span>-->
 								<span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-up">
 									<span  class="smart-filter-angles"></span>
 								</span>
@@ -172,10 +172,10 @@ if (isset($templateData['TEMPLATE_THEME']))
 					?>
 
 					<div class="<?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<?else:?>col-lg-12<?endif?> mb-2 smart-filter-parameters-box <?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>bx-active<?endif?>">
-						<div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+						<div class="smart-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)" style="display: none">
 							<span class="smart-filter-container-modef"></span>
 
-							<span class="smart-filter-parameters-box-title-text"><?=$arItem["NAME"]?></span>
+<!--							<span class="smart-filter-parameters-box-title-text">--><?php //=$arItem["NAME"]?><!--</span>-->
 
 							<span data-role="prop_angle" class="smart-filter-angle smart-filter-angle-<?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>up<?else:?>down<?endif?>">
 								<span  class="smart-filter-angles"></span>
@@ -704,7 +704,7 @@ if (isset($templateData['TEMPLATE_THEME']))
 			</div><!--//row-->
 
 			<div class="row">
-				<div class="col smart-filter-button-box">
+				<div class="col smart-filter-button-box" style="display: none">
 					<div class="smart-filter-block">
 						<div class="smart-filter-parameters-box-container">
 							<input
@@ -784,10 +784,10 @@ if (isset($templateData['TEMPLATE_THEME']))
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "EMAIL",
-			1 => "ADDRESS",
-			2 => "SITE",
-			3 => "PHONES",
+			0 => "ADDRESS",
+			1 => "PHONES",
+			2 => "EMAIL",
+			3 => "SITE",
 			4 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
@@ -818,8 +818,8 @@ if (isset($templateData['TEMPLATE_THEME']))
 	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
 
 
-	$('.news-item').click(function (e){
-		let target = $( this );
+	$('.news-item-title').click(function (e){
+		let target = $( this ).closest('.news-item');
 		if (target.hasClass('active')) {
 			target.removeClass('active')
 		} else {
