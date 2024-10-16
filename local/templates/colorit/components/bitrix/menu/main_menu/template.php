@@ -20,8 +20,11 @@ foreach($arResult as $arItem):?>
                 </svg>
 				<ul>
 		<?else:?>
-			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><span href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></span>
-				<ul>
+			<li<?if ($arItem["SELECTED"]):?> class="parent item-selected" <?else :?> class="parent" <?endif?>><span href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></span>
+                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L0.535898 6.52533e-07L7.4641 4.68497e-08L4 6Z" fill="#055B8C"/>
+                </svg>
+                <ul class="subParent">
 		<?endif?>
 
 	<?else:?>

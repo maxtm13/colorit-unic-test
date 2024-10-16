@@ -265,6 +265,36 @@ div.menu-clear-left {
   clear: left;
 }
 
+@media (max-width: 768px) {
+  #left-menu li.parent.active ul {
+    display: block;
+    opacity: 1;
+  }
+  #left-menu li:has(:not(.active)) ul,
+  #left-menu li ul li:hover,
+  #left-menu li:hover ul {
+    position: static;
+    display: none;
+  }
+  #left-menu li ul li:hover {
+    display: inherit;
+    background-color: unset;
+    color: inherit;
+  }
+  #left-menu li.parent:not(.active) ul {
+    display: none;
+  }
+  #left-menu a:hover {
+    color: inherit;
+  }
+  #left-menu li:hover > svg,
+  #left-menu li:hover svg {
+    transform: rotate(-90deg);
+  }
+  #left-menu li.active > svg {
+    transform: rotate(0) translateX(0);
+  }
+}
 /*========================*/
 /*ul {*/
 /*	font-family: "Roboto";*/

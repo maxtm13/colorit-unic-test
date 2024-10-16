@@ -23,7 +23,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 
 
-    <ul class="row anonce__categories_items-top">
+    <ul class="row anonce__categories_items-top mt-">
 <? foreach ($arResult['SECTIONS'] as $key => &$arSection) :
 
     ?>
@@ -47,7 +47,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
     <?php // Центральна часть
     ?>
     <?php if ($key === 3) { ?>
-    <div class="row anonce__item_main-center">
+    <div class="row anonce__item_main-center d-none d-lg-block">
         <div class="col-12 central_icon">
             <? // Вставка включаемой области - http://dev.1c-bitrix.ru/user_help/settings/settings/components_2/include_areas/main_include.php
             $APPLICATION->IncludeComponent(
