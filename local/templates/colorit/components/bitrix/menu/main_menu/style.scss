@@ -319,6 +319,22 @@ div.menu-clear-left
 	}#left-menu li.active>svg {
 		transform: rotate(0) translateX(0);
 	}
+	#left-menu li ul ul.subParent {
+		margin: -20px 0 0 120px;
+	}
+	#left-menu li.parent.active ul li.parent.active ul.subParent li {
+		line-height: 1.5;
+
+	}
+	//@media (max-width: 576px) {
+	//	.anonce .section__name {
+	//		font-weight: 800;
+	//		font-size: 12px;
+	//		text-transform: uppercase;
+	//		text-align: right;
+	//		color: var(--3);
+	//	}
+	//}
 }
 
 

@@ -23,7 +23,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 
 
-    <ul class="row anonce__categories_items-top mt-">
+    <ul class="row anonce__categories_items-top my-4 my-md-0">
 <? foreach ($arResult['SECTIONS'] as $key => &$arSection) :
 
     ?>

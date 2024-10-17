@@ -27,7 +27,7 @@ $(document).ready(function () {
         });
     });
     $(".menu-btn").click(function (){
-        $(".header__wrapper-mobile .header__menu").show()
+        $(".header__wrapper-mobile .header__menu").show("slow")
         $('body').css({"overflow": "hidden"});
     })
     let mobileMenu = $(".header__wrapper-mobile .header__menu")
@@ -52,6 +52,9 @@ $(document).ready(function () {
             })
         }
     });
+    $('.close_button').click(function (){
+        $('.header__menu').hide("slow")
+    })
     // console.log('dsffgdfssdgsdf')
     // $('li.parent.active li.parent').click(function (e){
     //     console.log('ddddddddsssssssss');
