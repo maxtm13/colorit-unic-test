@@ -205,12 +205,10 @@ unset($arIBlockElement);
             </div>
             <div class="header__callback">
                 <p class="header__phone">
-                    <a href="<?= preg_replace('/[^0-9]/', '', $phone) ?>"><?= $phone ?></a>
-
-
+                    <a href="tel:<?= preg_replace('/[^0-9]/', '', $phone) ?>"><?= $phone ?></a>
                 </p>
                 <p class="header__callback_form">
-                    <a href="#!" class="calback_form-link">Заказать звонок</a>
+                    <a class="calback_form-link" href="" data-fancybox data-src="#callback" title="Заказать звонок">Заказать звонок</a>
                 </p>
             </div>
         </div>
@@ -279,10 +277,10 @@ unset($arIBlockElement);
             <div class="d-flex ">
                 <div class="header__callback">
                     <p class="header__phone">
-                        <a href="<?= preg_replace('/[^0-9]/', '', $phone) ?>"><?= $phone ?></a>
+                        <a href="tel:<?= preg_replace('/[^0-9]/', '', $phone) ?>"><?= $phone ?></a>
                     </p>
                     <p class="header__callback_form">
-                        <a href="#!" class="calback_form-link">Заказать звонок</a>
+                        <a class="calback_form-link" href="" data-fancybox data-src="#callback" title="Заказать звонок">Заказать звонок</a>
                     </p>
                 </div>
                 <button class="menu-btn">
@@ -448,6 +446,42 @@ unset($arIBlockElement);
         ?>
     </div>
 <? endif ?>
+<div style="display: none; width: 500px;" id="callback">
+<?$APPLICATION->IncludeComponent(
+    "maxtm1:form.result.new",
+    "callback",
+    array(
+        "AJAX_MODE" => "Y",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_SHADOW" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "A",
+        "CHAIN_ITEM_LINK" => "",
+        "CHAIN_ITEM_TEXT" => "",
+        "EDIT_URL" => "",
+        "IGNORE_CUSTOM_TEMPLATE" => "Y",
+        "LIST_URL" => "",
+        "SEF_MODE" => "N",
+        "SUCCESS_URL" => "",
+        "USE_EXTENDED_ERRORS" => "N",
+        "WEB_FORM_ID" => "4",
+        "COMPONENT_TEMPLATE" => "callback",
+        "VARIABLE_ALIASES" => array(
+            "WEB_FORM_ID" => "WEB_FORM_ID",
+            "RESULT_ID" => "RESULT_ID",
+        )
+    ),
+    false
+);?>
+</div>
+
+    <script>
+        Fancybox.bind('[data-fancybox]', {
+            // Your custom options
+        });
+    </script>
 <?
 
 

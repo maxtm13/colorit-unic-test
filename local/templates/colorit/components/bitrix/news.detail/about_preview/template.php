@@ -13,8 +13,16 @@
 $this->setFrameMode(true);
 ?>
 <div class="section__wrapper">
-    <div class="section__pict"
+    <div class="section__pict d-none d-md-block"
          style="background-image: linear-gradient(90deg, rgba(255, 255, 255, 0%) 0%,  rgba(255, 255, 255, 0%) 50%, rgba(255, 255, 255, .69) 70.3%, #fff 100%), url(<?= $arResult['PREVIEW_PICTURE']['SRC'] ?>);"></div>
+    <div class="section__pict-mobile d-md-none">
+        <img
+            src="<?= $arResult['PREVIEW_PICTURE']['SRC'] ?>"
+            alt="about-<?$arResult['PREVIEW_PICTURE']['ALT']?>"
+            class="about-pict"
+            title="<?$arResult['PREVIEW_PICTURE']['TITLE']?>"
+        >
+    </div>
     <div class="section__content">
         <h2 class="section__title"><?= $arParams["PAGER_TITLE"] ?></h2>
         <div class="section__text"><?= $arResult['PREVIEW_TEXT'] ?></div>
@@ -29,7 +37,8 @@ $this->setFrameMode(true);
 <h2 class="section__title">Главный офис:</h2>
 
 <div class="contacts">
-    <div class='contacts__map' id="map" style="width: 951px; height: 544px"></div>
+<!--    <div class='contacts__map' id="map" style="width: 951px; height: 544px"></div>-->
+    <div class='contacts__map' id="map"></div>
     <div class="contacts__info">
         <h3 class="contacts__info_title">Главный офис:</h3>
         <div class="contacts__info_wrapper">
@@ -69,9 +78,23 @@ $this->setFrameMode(true);
 
 
 <script>
+    let centerMap = [44.390556, 46.167604],
+        pinImageSize = [40, 52],
+        pinIconImageOffset= [-20, -52],
+        metka = [40, 40],
+        metkaIconImageOffset= [-20, -20]
+
+    if (document.documentElement.clientWidth <= 561) {
+        centerMap = [45.589751, 39.970458];
+        pinImageSize = [15, 19];
+        pinIconImageOffset = [-pinImageSize[0]/2,-pinImageSize[1]];
+        metka = [15, 15];
+        metkaIconImageOffset = [-metka[0]/2,-metka[1]/2];
+    }
+    console.log(pinIconImageOffset)
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
-            center: [44.390556, 46.167604],
+            center: centerMap,
             zoom: 6.25,
             controls: {}
         }, {
@@ -94,10 +117,10 @@ $this->setFrameMode(true);
                 // Своё изображение иконки метки.
                 iconImageHref: 'img/city_mark.png',
                 // Размеры метки.
-                iconImageSize: [40, 40],
+                iconImageSize: metka,
                 // Смещение левого верхнего угла иконки относительно
                 // её "ножки" (точки привязки).
-                iconImageOffset: [-20, -20]
+                iconImageOffset: metkaIconImageOffset
             }),
 
             myPlacemarkWithContent = new ymaps.Placemark([<?=$arResult['ON_MAP'][0]?>, <?=$arResult['ON_MAP'][1]?>], {
@@ -112,12 +135,12 @@ $this->setFrameMode(true);
                 // Своё изображение иконки метки.
                 iconImageHref: 'img/map_pin.png',
                 // Размеры метки.
-                iconImageSize: [40, 52],
+                iconImageSize: pinImageSize,
                 // Смещение левого верхнего угла иконки относительно
                 // её "ножки" (точки привязки).
-                iconImageOffset: [-20, -52],
+                iconImageOffset: pinIconImageOffset,
                 // Смещение слоя с содержимым относительно слоя с картинкой.
-                iconContentOffset: [0, -20],
+                // iconContentOffset: [0, -20],
                 // Макет содержимого.
                 iconContentLayout: MyIconContentLayout
             });

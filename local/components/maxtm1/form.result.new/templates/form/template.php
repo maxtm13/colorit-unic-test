@@ -38,8 +38,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                        id="form_checkbox_policy_c[]"
                        required
                        value="<?= $arResult["QUESTIONS"]['policy_c']['STRUCTURE'][0]['ID'] ?>">
-                <label for="form_checkbox_policy_c[]" >
-                    <?= $arResult["QUESTIONS"]['policy_c']['CAPTION'] ?>
+                <label for="form_checkbox_policy_c[]" ><span>
+                    <?= $arResult["QUESTIONS"]['policy_c']['CAPTION'] ?></span>
                 </label>
             </div>
             <div class="form__btn" name="web_form_submit">

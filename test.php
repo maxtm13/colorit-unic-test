@@ -2,6 +2,34 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
 ?><?$APPLICATION->IncludeComponent(
+	"maxtm1:form.result.new", 
+	"callback", 
+	array(
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "",
+		"IGNORE_CUSTOM_TEMPLATE" => "Y",
+		"LIST_URL" => "",
+		"SEF_MODE" => "N",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "N",
+		"WEB_FORM_ID" => "4",
+		"COMPONENT_TEMPLATE" => "callback",
+		"VARIABLE_ALIASES" => array(
+			"WEB_FORM_ID" => "WEB_FORM_ID",
+			"RESULT_ID" => "RESULT_ID",
+		)
+	),
+	false
+);?>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.filter",
 	"",
 	Array(
@@ -164,16 +192,64 @@ $APPLICATION->SetTitle("test");
 		"TOP_DEPTH" => "2"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"bitrix:furniture.catalog.index", 
-	".default", 
-	array(
+	"bitrix:furniture.catalog.index",
+	".default",
+	Array(
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000",
 		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_BINDING" => "section",
 		"IBLOCK_ID" => "1",
-		"IBLOCK_TYPE" => "catalog",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
+		"IBLOCK_TYPE" => "catalog"
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:search.form",
+	"",
+	Array(
+		"PAGE" => "#SITE_DIR#search/index.php",
+		"USE_SUGGEST" => "N"
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:main.feedback",
+	"",
+	Array(
+		"EMAIL_TO" => "maxtm1@yandex.ru",
+		"EVENT_MESSAGE_ID" => array(),
+		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+		"REQUIRED_FIELDS" => array("NAME"),
+		"USE_CAPTCHA" => "Y"
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:form.result.list",
+	"",
+	Array(
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "result_edit.php",
+		"NAME_TEMPLATE" => "",
+		"NEW_URL" => "result_new.php",
+		"NOT_SHOW_FILTER" => "",
+		"NOT_SHOW_TABLE" => "",
+		"SEF_MODE" => "N",
+		"SHOW_ADDITIONAL" => "N",
+		"SHOW_ANSWER_VALUE" => "N",
+		"SHOW_STATUS" => "Y",
+		"VIEW_URL" => "result_view.php",
+		"WEB_FORM_ID" => $_REQUEST[WEB_FORM_ID]
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:form.result.view",
+	"",
+	Array(
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "result_edit.php",
+		"NAME_TEMPLATE" => "",
+		"RESULT_ID" => $_REQUEST["RESULT_ID"],
+		"SEF_MODE" => "N",
+		"SHOW_ADDITIONAL" => "N",
+		"SHOW_ANSWER_VALUE" => "N",
+		"SHOW_STATUS" => "Y"
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

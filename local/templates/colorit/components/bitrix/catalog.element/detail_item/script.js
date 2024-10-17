@@ -3600,62 +3600,77 @@
 // 		}
 // 	}
 // })(window);
-$(document).ready(function (){
+$(document).ready(function () {
 
-	$('.slider-section-slider').slick({
-		infinite: false,
-		slidesToShow: 4,
-		// variableWidth: true,
-		// slidesToScroll: 1,
-		prevArrow: '<span  class="slick-prev"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-			'  <path d="M17 31L2 16.0001L17 1" stroke="#055B8C" stroke-width="2" />\n' +
-			'</svg></span>',
-		nextArrow: '<span  class="slick-next"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-			'  <path d="M1 31L16 16.0001L0.999999 1" stroke="#055B8C" stroke-width="2" />\n' +
-			'</svg></span>',
-	});
+    $('.slider-section-slider').slick({
+        infinite: false,
+        slidesToShow: 4,
+        // variableWidth: true,
+        // slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 561,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    infinite: true,
+                }
+            },
+        ],
+        prevArrow: '<span  class="slick-prev"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '  <path d="M17 31L2 16.0001L17 1" stroke="#055B8C" stroke-width="2" />\n' +
+            '</svg></span>',
+        nextArrow: '<span  class="slick-next"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '  <path d="M1 31L16 16.0001L0.999999 1" stroke="#055B8C" stroke-width="2" />\n' +
+            '</svg></span>',
+    });
 
-	Fancybox.bind("[data-fancybox]", {
+    Fancybox.bind("[data-fancybox]", {});
 
-	});
-
-		Fancybox.bind('[data-fancybox="gallery-a"]', {
-			// on: {
-			// 	"destroy": (fancybox, eventName) => {
-			// 		$('.slider-section-slider').slick({
-			// 			infinite: true,
-			// 			slidesToShow: 4,
-			// 			// slidesToScroll: 1,
-			// 			prevArrow: '<span  class="slick-prev"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-			// 				'  <path d="M17 31L2 16.0001L17 1" stroke="#055B8C" stroke-width="2" />\n' +
-			// 				'</svg></span>',
-			// 			nextArrow: '<span  class="slick-next"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-			// 				'  <path d="M1 31L16 16.0001L0.999999 1" stroke="#055B8C" stroke-width="2" />\n' +
-			// 				'</svg></span>',
-			// 		});
-			// 		console.log('slider done')
-			// 	},
-			// },
-		});
+    Fancybox.bind('[data-fancybox="gallery-a"]', {
+        // on: {
+        // 	"destroy": (fancybox, eventName) => {
+        // 		$('.slider-section-slider').slick({
+        // 			infinite: true,
+        // 			slidesToShow: 4,
+        // 			// slidesToScroll: 1,
+        // 			prevArrow: '<span  class="slick-prev"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        // 				'  <path d="M17 31L2 16.0001L17 1" stroke="#055B8C" stroke-width="2" />\n' +
+        // 				'</svg></span>',
+        // 			nextArrow: '<span  class="slick-next"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        // 				'  <path d="M1 31L16 16.0001L0.999999 1" stroke="#055B8C" stroke-width="2" />\n' +
+        // 				'</svg></span>',
+        // 		});
+        // 		console.log('slider done')
+        // 	},
+        // },
+    });
 
 
+    const container = document.getElementById("zoom");
 
-	const container = document.getElementById("zoom");
+    const instance = new Panzoom(container, {
+        panMode: 'mousemove',
+        mouseMoveFactor: 1.25,
+        click: false,
+        wheel: false
+    });
 
-	const instance = new Panzoom(container, {
-		panMode: 'mousemove',
-		mouseMoveFactor: 1.25,
-		click: false,
-		wheel: false
-	});
+    container.addEventListener("mouseenter", (event) => {
+        if (!event.buttons) {
+            instance.zoomToCover(event);
+        }
+    });
 
-	container.addEventListener("mouseenter", (event) => {
-		if (!event.buttons) {
-			instance.zoomToCover(event);
-		}
-	});
-
-	container.addEventListener("mouseleave", () => {
-		instance.zoomToFit();
-	});
+    container.addEventListener("mouseleave", () => {
+        instance.zoomToFit();
+    });
 })

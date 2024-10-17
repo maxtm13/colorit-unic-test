@@ -7,7 +7,7 @@ AddEventHandler('subscribe', 'OnStartSubscriptionAdd', 'getPopup');
 // Подключаем модули
 Loader::includeModule('subscribe'); // Подключаем модуль Подписка, рассылки
 ?>
-    <section class="subscribe container">
+    <section class="subscribe subscribe-container">
         <div class="subscribe__text">
             <div class="subscribe__title"><?= $arResult['TITLE']; ?></div>
             <p class="subscribe__subtitle"><?= $arResult['SUBTITLE']; ?></p>
@@ -20,7 +20,7 @@ Loader::includeModule('subscribe'); // Подключаем модуль Под�
             <div class="form__checkbox">
                 <input required name="agreement" id="agreement" data-type="checkbox" type="checkbox">
                 <label for="agreement" class="checkbox checkbox_white">
-                    <span class="label">Я согласен на обработку <a href="<?= $arResult['POLICY']; ?>" target="_blank">моих персональных данных </a></span>
+                    <span class="label_checkbox">Я согласен на обработку <a href="<?= $arResult['POLICY']; ?>" target="_blank">моих персональных данных </a></span>
                     <!--                    <span class="custom-checkbox"></span>-->
                     <span class="error-message" style="display:none">Обязательное поле</span>
                 </label>

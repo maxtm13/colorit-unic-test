@@ -557,6 +557,8 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
             <section class="add-items">
                 <div class="row">
                     <div class="col-12">
+                        <?
+                        if (!empty($arResult['PROPERTIES']['ADDITIONAL']['VALUE'])) {?>
                         <div class="product-item-add-items-title">Рекомендуем в сочетании:</div>
                         <div class="product-item-add-items">
                             <?
@@ -673,17 +675,9 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
                                 false
                             );
                             ?>
-                            <?
-                            foreach ($arResult['ADD_ITEMS'] as $addItem) { ?>
-                                <div class="add-item">
 
-
-                                </div>
-
-                                <?
-                            }
-                            ?>
                         </div>
+                        <? }?>
                     </div>
                 </div>
             </section>

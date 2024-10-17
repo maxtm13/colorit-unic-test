@@ -49,6 +49,10 @@ a:focus:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 section {
   margin-bottom: 80px;
 }
@@ -206,6 +210,26 @@ svsg {
   color: #055b8c;
 }
 
+.callback_form .title {
+  font-weight: 500;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #202125;
+}
+.callback_form .form__inputs {
+  row-gap: 16px;
+}
+.callback_form .form__inputs input {
+  width: 100%;
+}
+.callback_form .form__comment textarea {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 100%;
+  height: 113px;
+  border: 1px solid #b9c6cd;
+}
+
 .breadcrumb {
   background: none;
   margin-bottom: 10px;
@@ -306,6 +330,8 @@ svsg {
   .anonce .section__name::after {
     width: 39px;
     height: 1.38px;
+    background-size: contain;
+    background-image: url("/img/mobile_after_accent.svg");
   }
   .anonce .anonce__item_first .section__name {
     right: 24.5px;
@@ -314,6 +340,7 @@ svsg {
   .anonce .anonce__item_second .section__name {
     left: 24.5px;
     top: 17px;
+    width: 90px;
   }
   .anonce .category__item {
     height: unset;
@@ -325,11 +352,6 @@ svsg {
   }
 }
 
-@media (max-width: 768px) {
-  .anonce {
-    background-color: #e4e4e4;
-  }
-}
 .section__title {
   font-weight: 700;
   font-size: 40px;
@@ -412,7 +434,7 @@ svsg {
 
 .advantages-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 338px));
   gap: 24px;
 }
 .advantages-list .advantages-item {
@@ -485,6 +507,10 @@ svsg {
   background-image: url(/img/after_accent.svg);
   -webkit-background-size: cover;
   background-size: cover;
+}
+.section__about #map {
+  width: 951px;
+  height: 544px;
 }
 .section__about .section__content {
   width: 903px;
@@ -592,6 +618,10 @@ svsg {
   height: 8px;
   margin-left: 3px;
   background-color: #055b8c;
+}
+
+.footer .form__checkbox input[type=checkbox]:checked + label::after {
+  background-color: #ffffff;
 }
 
 .form__btn button {
@@ -877,6 +907,9 @@ svsg {
 
 .product-item-image-original {
   position: relative;
+}
+.product-item-image-original img {
+  width: 100%;
 }
 .product-item-image-original .product-item-chacteristics {
   position: absolute;
@@ -1291,6 +1324,13 @@ svsg {
 .about .form .form-item input {
   width: 100%;
 }
+.about .third-section {
+  display: none !important;
+}
+
+.technical-info .third-section {
+  display: none;
+}
 
 .popup-window {
   background-color: #E4E4E4;
@@ -1328,6 +1368,169 @@ svsg {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #055b8c;
+}
+
+@media (max-width: 768px) {
+  .anonce {
+    background-color: #e4e4e4;
+    padding-bottom: 0;
+    margin-bottom: 33px;
+  }
+  .section__news {
+    padding-top: 0;
+    margin-bottom: 33px;
+  }
+  .section__news .news-item {
+    margin-bottom: 33px;
+  }
+  .section__wrapper {
+    margin-bottom: 33px;
+  }
+  .footer .footer__top .footer__first_section .section_wrapper {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 561px) {
+  .container {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+  .anonce .category__item_title {
+    font-size: 12px;
+  }
+  .section__about {
+    margin-bottom: 70px;
+  }
+  .section__about .about-pict {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .section__about .section__content {
+    width: 100%;
+  }
+  .section__about .section__wrapper .section__title {
+    margin-bottom: 31px;
+  }
+  .section__about .section__wrapper .section__title::after {
+    bottom: -16px;
+  }
+  .section__about .section__title {
+    font-weight: 400;
+    font-size: 40px;
+    color: #141c20;
+  }
+  .section__about .contacts {
+    display: block;
+  }
+  .section__about .contacts #map {
+    width: 100%;
+    height: 194px;
+    margin-bottom: 12px;
+  }
+  .section__about .contacts .contacts__info_title {
+    display: none;
+  }
+  .section__about .contacts .contacts__info_address {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #141c20;
+    width: 80%;
+    margin-bottom: 12px;
+  }
+  .section__about .contacts .contacts__info_items {
+    -webkit-column-gap: 14px;
+    -moz-column-gap: 14px;
+    column-gap: 14px;
+  }
+  .section__form .form__title {
+    font-size: 37px;
+    line-height: 114%;
+  }
+  .section__form .form__decription {
+    margin-bottom: 32px;
+  }
+  .section__form .form__inputs {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+    row-gap: 15px;
+    margin-bottom: 31px;
+  }
+  .section__form .form__inputs input {
+    width: 100%;
+  }
+  .section__form .form__inputs .form__checkbox {
+    font-size: 12px;
+  }
+  .footer .footer__top .footer__first_section .section_wrapper {
+    flex-grow: 1;
+  }
+  .footer .footer__top .footer__phone {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .footer__fourth_section {
+    padding-top: 18px;
+  }
+  .footer__bottom_inner {
+    flex-direction: column;
+  }
+  .catalog .product-item-list-col-4 {
+    margin-bottom: 0;
+  }
+  .product-item:hover .product-item-chacteristics {
+    display: none;
+  }
+  .product-item-container {
+    margin-bottom: 25px;
+  }
+  .product-item-container .product-item-title-wrapper {
+    padding: 10px 0;
+  }
+  .product-item-container .product-item-title-wrapper .btn {
+    width: 100%;
+    height: 30px;
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .product-item-container .product-item-title-wrapper .product-item-title {
+    font-size: 14px;
+    line-height: 107%;
+    color: #57656d;
+  }
+  .bx_pagination_page ul li {
+    padding: 11px 18px;
+  }
+  .section__decription {
+    margin-top: 25px;
+  }
+  .container-fluid .bx-title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 125%;
+  }
+  .catalog .product-item-detail-slider-block.product-item-detail-slider-block-square {
+    height: 294px;
+    width: 100%;
+  }
+  .catalog .slider .slick-next {
+    right: 10px;
+  }
+  .catalog .slider .slick-prev {
+    left: 10px;
+  }
+  .catalog .charakteristics .product-item-schema .schema-pict {
+    width: 100%;
+    height: auto;
+  }
+  .catalog .add-items .product-item-add-items-title {
+    font-weight: 400;
+    font-size: 26px;
+  }
+}
+form a {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=template_styles.css.map */

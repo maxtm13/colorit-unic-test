@@ -25,7 +25,7 @@ use \Bitrix\Main\Localization\Loc;
  */
 ?>
 
-<div class="product-item sss">
+<div class="product-item sssggg">
     <?
     //	echo '<pre>';
     //	print_r($item['PROPERTIES']['GROUP_CHAR'] );
@@ -35,7 +35,7 @@ use \Bitrix\Main\Localization\Loc;
     ?>
     <a class="product-item-image-wrapper" href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>"
        data-entity="image-wrapper">
-        <div class="product-item-image-original" id="<?= $itemIds['PICT'] ?>">
+        <div class="product-item-image-original jjj" id="<?= $itemIds['PICT'] ?>">
             <img src="<?= $item['PREVIEW_PICTURE']['SRC'] ?>" alt="<?= $imgTitle ?>">
             <? if (is_array($item['PROPERTIES']['GROUP_CHAR']['VALUE'])) { ?>
                 <div class="product-item-chacteristics">

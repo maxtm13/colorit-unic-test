@@ -213,13 +213,13 @@ if ($showTopPager)
 			?>
 			<div class="row <?=$rowData['CLASS']?>" data-entity="items-row">
 
-				<div class="col-xs-12 product-item-small-card  ggg">
+				<div class="col-xs-12 product-item-small-card fff">
 					<div class="row">
 						<?
 						foreach ($rowItems as $item)
 						{
 							?>
-							<div class="col-xs-6 col-md-3">
+							<div class="col-6 col-md-3">
 								<?
 								$APPLICATION->IncludeComponent(
 									'bitrix:catalog.item',

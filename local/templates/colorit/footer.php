@@ -41,9 +41,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         <div class="container">
             <div class="row">
 
-                <div class="col-sm-4">
+                <div class="col-md-4 col-12">
                     <div class="footer__first_section">
                         <div class="footer__logo">
+                            <a href="/" >
                             <? $APPLICATION->IncludeComponent(
                                 "bitrix:main.include",
                                 "",
@@ -54,6 +55,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                                     "PATH" => "/includes/footer_logo.php"
                                 )
                             ); ?>
+                            </a>
                         </div>
                         <div class="section_wrapper">
                             <div class="section_menu">
@@ -108,7 +110,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                         </div>
                     </div>
                 </div>
-                <div class="footer__second_section col-sm-2">
+                <div class="footer__second_section col-md-2 col-6">
                     <? $APPLICATION->IncludeComponent(
                         "bitrix:menu",
                         "main_menu",
@@ -137,7 +139,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                         false
                     ); ?>
                 </div>
-                <div class="footer__third_section col-sm-2">
+                <div class="footer__third_section col-md-2 col-6">
                     <div class="footer__social_box">
                         <div class="footer__social_box_title">Мы в соцсетях</div>
                         <div class="footer__social_box_link">
@@ -163,7 +165,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 
                 </div>
-                <div class="footer__fourth_section col-sm-4">
+                <div class="footer__fourth_section col-md-4 col-12">
                     <div class="subscribe__box">
                         <?$APPLICATION->IncludeComponent(
 	"maxtm1:newsletter.subscription", 

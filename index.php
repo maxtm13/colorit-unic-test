@@ -7,7 +7,7 @@ $APPLICATION->ShowTitle();
 <div class="container">
  <div class="section__news header">
   <h2 class="section__title">Новости</h2>
-  <div class="section__news_btn">
+  <div class="section__news_btn d-none d-md-block">
    <a href="/news/" class="btn_link">
     <span class="btn_text">Все новости</span>
    </a>
@@ -167,6 +167,11 @@ $APPLICATION->ShowTitle();
 	false
 );
        */ ?>
+    <div class="section__news_btn section__news_btn-mobile d-md-none text-right">
+        <a href="/news/" class="btn_link">
+            <span class="btn_text">Все новости</span>
+        </a>
+    </div>
 </div>
  </section> <section class="section__advantages">
 <div class="container">
