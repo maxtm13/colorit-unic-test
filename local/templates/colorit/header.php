@@ -42,6 +42,8 @@ unset($arIBlockElement);
         Asset::getInstance()->addJs('https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=73ca52d4-f222-48f5-99aa-89da6d8dccfa');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.maskedinput.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/fancybox/fancybox.umd.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.js');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.css');
         $APPLICATION->ShowHead();
         ?>
         <meta charset="UTF-8">

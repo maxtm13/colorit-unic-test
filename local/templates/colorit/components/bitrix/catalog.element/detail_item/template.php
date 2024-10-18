@@ -17,8 +17,8 @@ use Bitrix\Catalog\ProductTable;
 
 $this->setFrameMode(true);
 //$this->addExternalCss('/bitrix/css/main/bootstrap.css');
-$this->addExternalJs(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.js');
-$this->addExternalCss(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.css');
+//$this->addExternalJs(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.js');
+//$this->addExternalCss(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.css');
 $this->addExternalJs('https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js');
 $this->addExternalCss( 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.css');
 
@@ -335,7 +335,7 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
                                 </div>
                             </div>
                             <div class="col-sm-10">
-                                <button class="calculate-button">Рассчитать стоимость</button>
+                                <button class="calculate-button" data-fancybox data-src="#cost">Рассчитать стоимость</button>
                                 <div class="product-item-detail-properties">
                                     <div class="properties-wrapper">
                                         <?
@@ -727,3 +727,45 @@ $jsParams["IS_FACEBOOK_CONVERSION_CUSTOMIZE_PRODUCT_EVENT_ENABLED"] =
 //echo '</pre>';
 
 unset($actualItem, $itemIds, $jsParams);
+?>
+ <div style="display: none; width: 500px;" id="cost">
+        <? $GLOBALS['product'] = ['NAME'=> 'someID'];
+
+        $APPLICATION->IncludeComponent(
+            "maxtm1:form.result.new",
+            "cost",
+            array(
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_SHADOW" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_TIME" => "3600",
+                "CACHE_TYPE" => "A",
+                "CHAIN_ITEM_LINK" => "",
+                "CHAIN_ITEM_TEXT" => "",
+                "EDIT_URL" => "",
+                "IGNORE_CUSTOM_TEMPLATE" => "Y",
+                "LIST_URL" => "",
+                "SEF_MODE" => "N",
+                "SUCCESS_URL" => "",
+                "USE_EXTENDED_ERRORS" => "N",
+                "WEB_FORM_ID" => "5",
+                "COMPONENT_TEMPLATE" => "cost",
+                "VARIABLE_ALIASES" => array(
+                    "WEB_FORM_ID" => "WEB_FORM_ID",
+                    "RESULT_ID" => "RESULT_ID",
+                ),
+            ),
+            false
+        );?>
+    </div>
+
+    <script>
+        // $('.calculate-button').click(function (){
+        //     Fancybox.show({ src: "#cost", type: "inline" })
+        // })
+        // Fancybox.bind('[data-fancybox]', {
+        //     // Your custom options
+        // });
+    </script>

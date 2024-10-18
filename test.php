@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("test");
 		"SEF_MODE" => "N",
 		"SUCCESS_URL" => "",
 		"USE_EXTENDED_ERRORS" => "N",
-		"WEB_FORM_ID" => "4",
+		"WEB_FORM_ID" => "5",
 		"COMPONENT_TEMPLATE" => "callback",
 		"VARIABLE_ALIASES" => array(
 			"WEB_FORM_ID" => "WEB_FORM_ID",

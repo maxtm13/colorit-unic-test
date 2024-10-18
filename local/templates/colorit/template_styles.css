@@ -49,10 +49,6 @@ a:focus:hover {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-}
-
 section {
   margin-bottom: 80px;
 }
@@ -124,6 +120,15 @@ svsg {
   width: 40px;
   height: 40px;
 }
+.header__wrapper .header__search_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__wrapper .header__search_btn .search_btn {
+  display: inline-block;
+  height: 22px;
+}
 .header__menu {
   text-transform: uppercase;
   font-weight: 600;
@@ -186,6 +191,9 @@ svsg {
   gap: 14px;
   align-items: center;
 }
+.header__social_box .social_link {
+  height: 28px;
+}
 .header__social_box .social_link svg {
   fill: #141C20;
 }
@@ -208,6 +216,10 @@ svsg {
   font-size: 14px;
   text-decoration: underline;
   color: #055b8c;
+}
+
+.fa {
+  transform: unset;
 }
 
 .callback_form .title {
@@ -1527,6 +1539,10 @@ svsg {
   .catalog .add-items .product-item-add-items-title {
     font-weight: 400;
     font-size: 26px;
+  }
+  .news .arrow-name,
+  .about .arrow-name {
+    font-size: 10px;
   }
 }
 form a {
