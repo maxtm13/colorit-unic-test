@@ -545,7 +545,7 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
                     </div>
                     <div class="col-md-6">
                         <div class="product-item-schema">
-                            <a data-fancybox class="pict-link" id="btn"
+                            <a data-fancyboxschema class="pict-link" id="btn"
                                data-src="<?= CFile::GetPath($arResult['PROPERTIES']['SCHEMA_PHOTO']['VALUE']) ?>">
                                 <img src="<?= CFile::GetPath($arResult['PROPERTIES']['SCHEMA_PHOTO']['VALUE']) ?>"
                                      alt="schema" class="schema-pict">
@@ -735,7 +735,7 @@ unset($actualItem, $itemIds, $jsParams);
             "maxtm1:form.result.new",
             "cost",
             array(
-                "AJAX_MODE" => "N",
+                "AJAX_MODE" => "Y",
                 "AJAX_OPTION_HISTORY" => "N",
                 "AJAX_OPTION_JUMP" => "N",
                 "AJAX_OPTION_SHADOW" => "N",

@@ -292,7 +292,8 @@ svsg {
 .fa {
   transform: unset;
 }
-.callback_form {
+.callback_form,
+.cost_form {
   .title {
     font-weight: 500;
     font-size: 28px;
@@ -309,7 +310,7 @@ svsg {
 
   }
 
-  .form__comment {
+  .form-item {
     textarea {
       padding-left: 20px;
       padding-top: 20px;
@@ -1912,6 +1913,43 @@ svsg {
       }
     }
   }
+  .catalog .list__categories {
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 1fr;
+    grid-template: repeat(3, 300px)/1fr;
+
+    .category__item.item-0,
+    .category__item.item-1,
+    .category__item.item-2 {
+      grid-row: unset;
+      grid-column: unset;
+      .category__item_title {
+        top: 30px;
+        right: 47px;
+        bottom: unset;
+        left: unset;
+        text-align: right;
+      }
+    }
+
+    .category__item .category__item_title::after {
+      opacity: 1;
+      right: 0;
+      left: unset;
+    }
+    .category__item_pict {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+  }
+  .catalog .list__categories .category__item.item-2 .category__item_pict {
+    width: unset;
+    height: unset;
+    object-fit: unset;
+  }
   .section__form {
     .form__title {
       font-size: 37px;
@@ -2018,4 +2056,14 @@ svsg {
 
 form a {
   text-decoration: underline;
+}
+#modef {
+
+  padding: 5px;
+  border: 1px solid $color-2;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: $color-5;
+
 }

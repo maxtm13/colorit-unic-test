@@ -91,7 +91,7 @@ $this->setFrameMode(true);
         metka = [15, 15];
         metkaIconImageOffset = [-metka[0]/2,-metka[1]/2];
     }
-    console.log(pinIconImageOffset)
+
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
             center: centerMap,

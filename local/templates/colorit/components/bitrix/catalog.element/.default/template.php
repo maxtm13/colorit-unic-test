@@ -17,8 +17,8 @@ use Bitrix\Catalog\ProductTable;
 
 $this->setFrameMode(true);
 //$this->addExternalCss('/bitrix/css/main/bootstrap.css');
-$this->addExternalJs(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.js');
-$this->addExternalCss(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.css');
+//$this->addExternalJs(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.js');
+//$this->addExternalCss(SITE_TEMPLATE_PATH . '/js/slick-slider/slick.min.css');
 $this->addExternalJs('https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.umd.js');
 $this->addExternalCss( 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/panzoom/panzoom.css');
 

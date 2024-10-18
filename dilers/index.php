@@ -192,7 +192,7 @@ $APPLICATION->SetTitle("Где купить");
 		"CHAIN_ITEM_TEXT" => "",
 		"EDIT_URL" => "result_edit.php",
 		"IGNORE_CUSTOM_TEMPLATE" => "Y",
-		"LIST_URL" => "result_list.php",
+		"LIST_URL" => "",
 		"SEF_MODE" => "N",
 		"SUCCESS_URL" => "",
 		"AJAX_MODE" => "Y",
@@ -204,8 +204,8 @@ $APPLICATION->SetTitle("Где купить");
 		"WEB_FORM_ID" => "3",
 		"COMPONENT_TEMPLATE" => "form_diler",
 		"VARIABLE_ALIASES" => array(
-			"WEB_FORM_ID" => "WEB_FORM_ID",
-			"RESULT_ID" => "RESULT_ID",
+			"WEB_FORM_ID" => "",
+			"RESULT_ID" => "",
 		)
 	),
 	false

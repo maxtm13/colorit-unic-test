@@ -30,7 +30,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"техническая информация", 
-		"", 
+		"/technical/", 
 		Array(), 
 		Array(), 
 		"" 

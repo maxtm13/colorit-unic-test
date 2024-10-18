@@ -1,7 +1,7 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
-    <div class="callback_form row">
+    <div class="cost_form row">
         <div class="col-md-10 offset-md-1">
             <div class="title text-center"><?= $arResult["FORM_TITLE"] ?></div>
             <?= $arResult["FORM_HEADER"] ?>
@@ -22,25 +22,28 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 <div class="form-item form__phone">
                     <input type="text"
                            name="form_<?= $arResult["QUESTIONS"]['phone']['STRUCTURE'][0]['FIELD_TYPE'] . '_' . $arResult["QUESTIONS"]['phone']['STRUCTURE'][0]['ID'] ?>"
-                           <? echo $arResult["QUESTIONS"]['phone'] ==='Y' ? 'required' : ''?>
+                        <? echo $arResult["QUESTIONS"]['phone'] === 'Y' ? 'required' : '' ?>
                            id="phone"
+                           class="form-phone"
                            placeholder="<?= $arResult["QUESTIONS"]['phone']['CAPTION'] ?>">
 
                 </div>
                 <div class="form-item form__message">
 
-                    <textarea  type="text"
-                           name="form_<?= $arResult["QUESTIONS"]['message']['STRUCTURE'][0]['FIELD_TYPE'] . '_' . $arResult["QUESTIONS"]['message']['STRUCTURE'][0]['ID'] ?>"
-                           id="message"
-                           placeholder="<?= $arResult["QUESTIONS"]['message']['CAPTION'] ?>" ></textarea>
+                    <textarea type="text"
+                              name="form_<?= $arResult["QUESTIONS"]['message']['STRUCTURE'][0]['FIELD_TYPE'] . '_' . $arResult["QUESTIONS"]['message']['STRUCTURE'][0]['ID'] ?>"
+                              id="message"
+                              placeholder="<?= $arResult["QUESTIONS"]['message']['CAPTION'] ?>"></textarea>
                 </div>
                 <div class="form__checkbox">
-                    <input type="checkbox" name="form_checkbox_policy[]"
-                           id="form_checkbox_policy[]"
+                    <input type="checkbox" name="form_checkbox_policy_cost[]"
+                           id="form_checkbox_policy_cost[]"
                            required
-                           value="<?= $arResult["QUESTIONS"]['policy']['STRUCTURE'][0]['ID'] ?>">
-                    <label for="form_checkbox_policy[]">
-                        <?= $arResult["QUESTIONS"]['policy']['CAPTION'] ?>
+                           value="<?= $arResult["QUESTIONS"]['policy_cost']['STRUCTURE'][0]['ID'] ?>">
+                    <label for="form_checkbox_policy_cost[]">
+                        <span>
+                            <?= $arResult["QUESTIONS"]['policy_cost']['CAPTION'] ?>
+                        </span>
                     </label>
                 </div>
                 <div class="text-center">
@@ -59,19 +62,16 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 <div class="form-item form__product">
                     <input type="text"
                            name="form_<?= $arResult["QUESTIONS"]['product']['STRUCTURE'][0]['FIELD_TYPE'] . '_' . $arResult["QUESTIONS"]['product']['STRUCTURE'][0]['ID'] ?>"
-                        <? echo $arResult["QUESTIONS"]['product'] ==='Y' ? 'required' : ''?>
+                        <? echo $arResult["QUESTIONS"]['product'] === 'Y' ? 'required' : '' ?>
                            id="product"
                            placeholder="<?= $arResult["QUESTIONS"]['product']['CAPTION'] ?>"
-                            hidden=""
-                    ><?$APPLICATION->GetCurDir()?>
+                           hidden=""
+                    ><? $APPLICATION->GetCurDir() ?>
 
                 </div>
             </div>
         </div>
-<?// pre($arParams)?>
-<?// pre($arResult['QUESTIONS']['comment']['STRUCTURE'] )?>
     </div>
-
 
 <?= $arResult["FORM_FOOTER"] ?>
     </div>
@@ -86,8 +86,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         Fancybox.close('#callback');
         Fancybox.show([
             {
-            src: "#form__popup_success",
-            type: "inline"
+                src: "#form__popup_success",
+                type: "inline"
             }
         ])
     </script>
@@ -98,7 +98,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
     <script>
         $(document).ready(function () {
-            $('#phone').mask("+7 (999) 999-9999");
+            $('.form-phone').mask("+7 (999) 999-9999");
         });
     </script>
 <?

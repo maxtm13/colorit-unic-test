@@ -87,8 +87,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                                     false
                                 ); ?>
                             </div>
+
                             <div class="section_search">
-                                <? $APPLICATION->IncludeComponent(
+                                <? //todo search form replace
+                                $APPLICATION->IncludeComponent(
                                     "bitrix:search.title",
                                     "visual",
                                     array(
@@ -105,7 +107,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                                         "TOP_COUNT" => "5",
                                         "USE_LANGUAGE_GUESS" => "Y"
                                     )
-                                ); ?>
+                                );
+                                ?>
                             </div>
                         </div>
                     </div>

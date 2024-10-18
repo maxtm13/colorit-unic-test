@@ -82,12 +82,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
             </div>
             <div class="form__checkbox">
-                <input type="checkbox" name="form_checkbox_policy[]"
-                       id="form_checkbox_policy[]"
+                <input type="checkbox" name="form_checkbox_policy_d[]"
+                       id="form_checkbox_policy_d[]"
                        required
-                       value="<?= $arResult["QUESTIONS"]['policy']['STRUCTURE'][0]['ID'] ?>">
-                <label for="form_checkbox_policy[]">
-                    <?= $arResult["QUESTIONS"]['policy']['CAPTION'] ?>
+                       value="<?= $arResult["QUESTIONS"]['policy_d']['STRUCTURE'][0]['ID'] ?>">
+                <label for="form_checkbox_policy_d[]">
+                    <?= $arResult["QUESTIONS"]['policy_d']['CAPTION'] ?>
                 </label>
             </div>
             <div class="text-center">

@@ -655,7 +655,8 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 								name="del_filter"
 								value="<?=GetMessage("CT_BCSF_DEL_FILTER")?>"
 							/>
-							<div class="bx-filter-popup-result <?if ($arParams["FILTER_VIEW_MODE"] == "VERTICAL") echo $arParams["POPUP_POSITION"]?>" id="modef" <?if(!isset($arResult["ELEMENT_COUNT"])) echo 'style="display:none"';?> style="display: inline-block;">
+<!--							<div class="bx-filter-popup-result --><?//if ($arParams["FILTER_VIEW_MODE"] == "VERTICAL") echo $arParams["POPUP_POSITION"]?><!--" id="modef" --><?//if(!isset($arResult["ELEMENT_COUNT"])) echo 'style="display:none"';?><!-- style="display: inline-block;">-->
+							<div class="bx-filter-popup-result maxtm1 <?if ($arParams["FILTER_VIEW_MODE"] == "VERTICAL") echo $arParams["POPUP_POSITION"]?>" id="modef" <?echo 'style="display:none"';?> style="display: inline-block;">
 								<?echo GetMessage("CT_BCSF_FILTER_COUNT", array("#ELEMENT_COUNT#" => '<span id="modef_num">'.(int)($arResult["ELEMENT_COUNT"] ?? 0).'</span>'));?>
 								<span class="arrow"></span>
 								<br/>

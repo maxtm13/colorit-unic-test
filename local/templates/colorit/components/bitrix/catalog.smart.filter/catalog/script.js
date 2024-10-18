@@ -212,7 +212,7 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache)
 			{
 				if (modef.style.display === 'none')
 				{
-					modef.style.display = 'inline-block';
+					// modef.style.display = 'inline-block';
 				}
 
 				if (this.viewMode == "VERTICAL")

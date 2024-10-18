@@ -40,7 +40,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                            required
                            value="<?= $arResult["QUESTIONS"]['policy']['STRUCTURE'][0]['ID'] ?>">
                     <label for="form_checkbox_policy[]">
-                        <?= $arResult["QUESTIONS"]['policy']['CAPTION'] ?>
+                        <span>
+                            <?= $arResult["QUESTIONS"]['policy']['CAPTION'] ?>
+                        </span>
                     </label>
                 </div>
                 <div class="text-center">

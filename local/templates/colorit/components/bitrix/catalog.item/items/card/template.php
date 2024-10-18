@@ -95,4 +95,16 @@ use \Bitrix\Main\Localization\Loc;
 
 </div>
 
+    <script>
+        $(document).ready(function (){
+            $('input[type="checkbox"]').on('change', function (e) {
+                // console.log('change')
+                setTimeout(()=>{
+                link = $('.bx-filter-popup-result>a').attr('href')
+                // console.log(link)
+                location.href=link
+                }, 800)
+            })
+        })
+    </script>
 <?

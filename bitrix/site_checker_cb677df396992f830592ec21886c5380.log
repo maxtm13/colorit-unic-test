@@ -1,126 +1,225 @@
-2024-Sep-19 15:51:13 Наличие необходимых модулей php (check_php_modules): Ok
+2024-Oct-17 16:54:54 Наличие необходимых модулей php (check_php_modules): Ok
 Все необходимые модули установлены
-2024-Sep-19 15:51:13 Обязательные параметры PHP (check_php_settings): Ok
+2024-Oct-17 16:54:54 Обязательные параметры PHP (check_php_settings): Ok
 Настройки правильные
-2024-Sep-19 15:51:13 Модули веб-сервера (check_security): Ok
+2024-Oct-17 16:54:55 Модули веб-сервера (check_security): Ok
 Конфликтов не выявлено
-2024-Sep-19 15:51:13 Значения переменных сервера (check_server_vars): Ok
+2024-Oct-17 16:54:55 Значения переменных сервера (check_server_vars): Ok
 Корректные
-2024-Sep-19 15:51:13 Сохранение сессии (check_session): Ok
+2024-Oct-17 16:54:55 Сохранение сессии (check_session): Ok
 50% done
-2024-Sep-19 15:51:13 Сохранение сессии (check_session): Ok
+2024-Oct-17 16:54:55 Сохранение сессии (check_session): Ok
 Успешно
-2024-Sep-19 15:51:13 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+2024-Oct-17 16:54:55 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
 Правильные. Сайт работает в UTF кодировке
-2024-Sep-19 15:51:13 Служебные скрипты в корне сайта (check_install_scripts): Ok
+2024-Oct-17 16:54:55 Служебные скрипты в корне сайта (check_install_scripts): Ok
 Отсутствуют
-2024-Sep-19 15:51:13 Работа с сокетами (check_socket): Ok
+2024-Oct-17 16:54:55 Работа с сокетами (check_socket): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Выполнение агентов на cron (check_bx_crontab): Fail
-Ошибка! Не настроен запуск cron_events.php на cron, последний агент отработал больше суток назад.
-2024-Sep-19 15:51:14 Параметры подключения к базе данных (check_dbconn_settings): Ok
+2024-Oct-17 16:54:55 Выполнение агентов на cron (check_bx_crontab): Ok
 Успешно
-2024-Sep-19 15:51:14 Лишний вывод в файлах конфигурации (check_dbconn): Ok
+2024-Oct-17 16:54:55 Лишний вывод в файлах конфигурации (check_dbconn): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Сохранение сессии без UserAgent (check_session_ua): Ok
+2024-Oct-17 16:54:55 Сохранение сессии без UserAgent (check_session_ua): Ok
 50% done
 Connection to colorit.unic-test.ru:80	Success
 
-2024-Sep-19 15:51:14 Сохранение сессии без UserAgent (check_session_ua): Ok
+2024-Oct-17 16:54:55 Сохранение сессии без UserAgent (check_session_ua): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Настройки сайтов (check_sites): Ok
+2024-Oct-17 16:54:55 Настройки сайтов (check_sites): Ok
 Правильные
-2024-Sep-19 15:51:14 Размер стека и pcre.recursion_limit (check_pcre_recursion): Ok
+2024-Oct-17 16:54:55 Размер стека и pcre.recursion_limit (check_pcre_recursion): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Загрузка файла (check_upload): Ok
+2024-Oct-17 16:54:55 Загрузка файла (check_upload): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Загрузка файла больше 4Мб (check_upload_big): Ok
+2024-Oct-17 16:54:55 Загрузка файла больше 4Мб (check_upload_big): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Загрузка файла через php://input (check_upload_raw): Ok
+2024-Oct-17 16:54:55 Загрузка файла через php://input (check_upload_raw): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Передача POST запроса с большим числом параметров (check_post): Ok
+2024-Oct-17 16:54:55 Передача POST запроса с большим числом параметров (check_post): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:14 Отправка почты (check_mail): Ok
+2024-Oct-17 16:54:55 Отправка почты (check_mail): Ok
 Успешно
-2024-Sep-19 15:51:15 Отправка почтового сообщения больше 64Кб (check_mail_big): Ok
+2024-Oct-17 16:54:56 Отправка почтового сообщения больше 64Кб (check_mail_big): Ok
 Успешно
-2024-Sep-19 15:51:15 Проверка на наличие неотправленных сообщений (check_mail_b_event): Ok
+2024-Oct-17 16:54:56 Проверка на наличие неотправленных сообщений (check_mail_b_event): Ok
 Успешно
-2024-Sep-19 15:51:15 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+2024-Oct-17 16:54:56 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
 50% done
 Connection to colorit.unic-test.ru:80	Success
 
-2024-Sep-19 15:51:15 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+2024-Oct-17 16:54:56 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:15 Фактическое ограничение памяти (check_memory_limit): Ok
+2024-Oct-17 16:54:56 Фактическое ограничение памяти (check_memory_limit): Ok
 20% done
 Connection to colorit.unic-test.ru:80	Success
 
-2024-Sep-19 15:51:15 Фактическое ограничение памяти (check_memory_limit): Ok
+2024-Oct-17 16:54:56 Фактическое ограничение памяти (check_memory_limit): Ok
 40% done
 Connection to colorit.unic-test.ru:80	Success
 
-2024-Sep-19 15:51:15 Фактическое ограничение памяти (check_memory_limit): Ok
+2024-Oct-17 16:54:56 Фактическое ограничение памяти (check_memory_limit): Ok
 60% done
 Connection to colorit.unic-test.ru:80	Success
 
-2024-Sep-19 15:51:15 Фактическое ограничение памяти (check_memory_limit): Ok
+2024-Oct-17 16:54:56 Фактическое ограничение памяти (check_memory_limit): Ok
 80% done
 Connection to colorit.unic-test.ru:80	Success
 
-2024-Sep-19 15:51:16 Фактическое ограничение памяти (check_memory_limit): Ok
+2024-Oct-17 16:54:56 Фактическое ограничение памяти (check_memory_limit): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Не менее 256 М
-2024-Sep-19 15:51:16 Работа с файлами кеша (check_cache): Ok
+2024-Oct-17 16:54:56 Работа с файлами кеша (check_cache): Ok
 Успешно
-2024-Sep-19 15:51:16 Доступ к серверу обновлений (check_update): Ok
+2024-Oct-17 16:54:56 Доступ к серверу обновлений (check_update): Ok
 Успешно
-2024-Sep-19 15:51:16 HTTP авторизация (check_http_auth): Ok
+2024-Oct-17 16:54:56 HTTP авторизация (check_http_auth): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:16 Создание и запуск файла (check_exec): Ok
+2024-Oct-17 16:54:56 Создание и запуск файла (check_exec): Ok
 Connection to colorit.unic-test.ru:80	Success
 
 Успешно
-2024-Sep-19 15:51:16 Функция getimagesize для swf (check_getimagesize): Ok
+2024-Oct-17 16:54:57 Функция getimagesize для swf (check_getimagesize): Ok
 Успешно
-2024-Sep-19 15:51:16 Версия MySQL-сервера (check_mysql_bug_version): Ok
+2024-Oct-17 16:54:57 Версия MySQL-сервера (check_mysql_bug_version): Ok
 Успешно
-2024-Sep-19 15:51:17 Время на БД и веб-сервере (check_mysql_time): Ok
+2024-Oct-17 16:54:58 Время на БД и веб-сервере (check_mysql_time): Ok
 Успешно
-2024-Sep-19 15:51:17 Режим работы MySQL (check_mysql_mode): Ok
+2024-Oct-17 16:54:58 Режим работы MySQL (check_mysql_mode): Ok
 Успешно
-2024-Sep-19 15:51:17 Кодировка соединения (check_mysql_connection_charset): Ok
-character_set_connection=utf8, collation_connection=utf8_unicode_ci, character_set_results=utf8
+2024-Oct-17 16:54:58 Кодировка соединения (check_mysql_connection_charset): Ok
+character_set_connection=utf8mb3, collation_connection=utf8mb3_unicode_ci, character_set_results=utf8mb3
 Успешно
-2024-Sep-19 15:51:17 Кодировка базы данных (check_mysql_db_charset): Ok
+2024-Oct-17 16:54:58 Кодировка базы данных (check_mysql_db_charset): Ok
 CHARSET=utf8mb3, COLLATION=utf8mb3_unicode_ci
 Успешно
-2024-Sep-19 15:51:18 Кодировки таблиц в БД (check_mysql_table_charset): Ok
+2024-Oct-17 16:54:58 Формат хранения таблиц в БД (check_mysql_table_format): Ok
 Успешно
-2024-Sep-19 15:51:18 Структура базы данных (check_mysql_table_structure): Ok
+2024-Oct-17 16:54:58 Кодировки таблиц в БД (check_mysql_table_charset): Ok
+Успешно
+2024-Oct-17 16:54:58 Структура базы данных (check_mysql_table_structure): Ok
 0% done
-2024-Sep-19 15:51:19 Структура базы данных (check_mysql_table_structure): Ok
-3% done
-2024-Sep-19 15:51:19 Структура базы данных (check_mysql_table_structure): Ok
-7% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+2% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+4% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+6% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+8% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+10% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+12% done
+2024-Oct-17 16:54:59 Структура базы данных (check_mysql_table_structure): Ok
+14% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+16% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+18% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+20% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+22% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+24% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+26% done
+2024-Oct-17 16:55:00 Структура базы данных (check_mysql_table_structure): Ok
+28% done
+2024-Oct-17 16:55:01 Структура базы данных (check_mysql_table_structure): Ok
+30% done
+2024-Oct-17 16:55:01 Структура базы данных (check_mysql_table_structure): Ok
+32% done
+2024-Oct-17 16:55:02 Структура базы данных (check_mysql_table_structure): Ok
+34% done
+2024-Oct-17 16:55:02 Структура базы данных (check_mysql_table_structure): Ok
+36% done
+2024-Oct-17 16:55:02 Структура базы данных (check_mysql_table_structure): Ok
+38% done
+2024-Oct-17 16:55:02 Структура базы данных (check_mysql_table_structure): Ok
+40% done
+2024-Oct-17 16:55:02 Структура базы данных (check_mysql_table_structure): Ok
+42% done
+2024-Oct-17 16:55:03 Структура базы данных (check_mysql_table_structure): Ok
+44% done
+2024-Oct-17 16:55:03 Структура базы данных (check_mysql_table_structure): Ok
+46% done
+2024-Oct-17 16:55:03 Структура базы данных (check_mysql_table_structure): Ok
+48% done
+2024-Oct-17 16:55:03 Структура базы данных (check_mysql_table_structure): Ok
+50% done
+2024-Oct-17 16:55:03 Структура базы данных (check_mysql_table_structure): Ok
+52% done
+2024-Oct-17 16:55:03 Структура базы данных (check_mysql_table_structure): Ok
+54% done
+2024-Oct-17 16:55:05 Структура базы данных (check_mysql_table_structure): Ok
+56% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+57% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+60% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+62% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+64% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+66% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+68% done
+2024-Oct-17 16:55:06 Структура базы данных (check_mysql_table_structure): Ok
+70% done
+2024-Oct-17 16:55:07 Структура базы данных (check_mysql_table_structure): Ok
+72% done
+2024-Oct-17 16:55:07 Структура базы данных (check_mysql_table_structure): Ok
+74% done
+2024-Oct-17 16:55:07 Структура базы данных (check_mysql_table_structure): Ok
+76% done
+2024-Oct-17 16:55:08 Структура базы данных (check_mysql_table_structure): Ok
+78% done
+2024-Oct-17 16:55:08 Структура базы данных (check_mysql_table_structure): Ok
+80% done
+2024-Oct-17 16:55:08 Структура базы данных (check_mysql_table_structure): Ok
+82% done
+2024-Oct-17 16:55:08 Структура базы данных (check_mysql_table_structure): Ok
+84% done
+2024-Oct-17 16:55:08 Структура базы данных (check_mysql_table_structure): Ok
+86% done
+2024-Oct-17 16:55:09 Структура базы данных (check_mysql_table_structure): Ok
+88% done
+2024-Oct-17 16:55:09 Структура базы данных (check_mysql_table_structure): Ok
+90% done
+В таблице b_sale_exchange_log не хватает поля PROVIDER
+
+2024-Oct-17 16:55:09 Структура базы данных (check_mysql_table_structure): Ok
+92% done
+2024-Oct-17 16:55:09 Структура базы данных (check_mysql_table_structure): Ok
+94% done
+2024-Oct-17 16:55:10 Структура базы данных (check_mysql_table_structure): Ok
+96% done
+2024-Oct-17 16:55:11 Структура базы данных (check_mysql_table_structure): Ok
+98% done
+2024-Oct-17 16:55:11 Структура базы данных (check_mysql_table_structure): Fail
+ALTER TABLE `b_sale_exchange_log` ADD `PROVIDER` varchar(50) NOT NULL;
+Ошибка! Структура базы данных имеет ошибки. Всего 1, автоматически могут быть исправлены: 1. Исправить
