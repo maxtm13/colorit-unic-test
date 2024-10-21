@@ -21,5 +21,5 @@ define("BX_DISABLE_INDEX_PAGE", true);
 
 define("BX_UTF", true);
 mb_internal_encoding("UTF-8");
-define('BX_CRONTAB_SUPPORT', true);
+//define('BX_CRONTAB_SUPPORT', true);
 
