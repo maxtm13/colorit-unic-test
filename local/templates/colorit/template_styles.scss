@@ -195,6 +195,9 @@ svsg {
     color: $text-accent;
     font-weight: 700;
     line-height: 1.07;
+  &>a {
+    height: unset;
+  }
   }
 
   &__search_wrapper {
