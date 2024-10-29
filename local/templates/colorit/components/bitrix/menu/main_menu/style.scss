@@ -140,9 +140,9 @@
 	/*!*border:1px solid #C1C1C1;*!*/
 	/*color:inherit;*/
 }
-#left-menu a:hover {
-	color: #ffffff;
-}
+//#left-menu a:hover {
+//	color: #ffffff;
+//}
 #left-menu li.parent svg{
 	transform: translateY(-1px) rotate(-90deg);
 	/*transform: ;*/
@@ -264,6 +264,19 @@
 	opacity: 0;
 	transition: opacity 0.5s;
 }
+#left-menu>li>a:hover {
+	color: #055b8c
+}
+#left-menu .subParent {
+	color: rgb(95, 94, 100);
+}
+#left-menu .subParent li:hover>a:hover,
+#left-menu  li:hover>a:hover {
+	color:	white;
+}
+#left-menu>li:hover>a:hover {
+	color: #055b8c
+}
 
 #left-menu li:hover ul,
 #left-menu li.jshover ul,
@@ -281,7 +294,7 @@
 	display:block;
 	opacity: 1;
 }
-#left-menu li:hover svg{
+#left-menu li:hover>svg{
 	transform: rotate(0) translateX(0);
 }
 
@@ -310,9 +323,13 @@ div.menu-clear-left
 	#left-menu li.parent:not(.active) ul {
 		display: none;
 	}
-	#left-menu a:hover {
-		color: inherit
+	#left-menu li>a:hover {
+		color: #055b8c
 	}
+	#left-menu .subParent li:hover>a:hover {
+		color:	white;
+	}
+
 	#left-menu li:hover>svg,
 	#left-menu li:hover svg {
 		transform: rotate(-90deg);

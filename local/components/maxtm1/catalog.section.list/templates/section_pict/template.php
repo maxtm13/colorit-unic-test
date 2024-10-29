@@ -48,7 +48,7 @@ $arImagesPath = CFile::GetPath($arResult['SECTION']['PICTURE']);
 
 ?>
 
-<div class="<? echo $arCurView['CONT']; ?>"><?
+<div class="anonce__item-wrapper<? echo $arCurView['CONT']; ?>"><?
 if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
 {
 	$this->AddEditAction($arResult['SECTION']['ID'], $arResult['SECTION']['EDIT_LINK'], $strSectionEdit);
@@ -57,7 +57,7 @@ if ('Y' == $arParams['SHOW_PARENT_NAME'] && 0 < $arResult['SECTION']['ID'])
 	?><h2
 		class="section__name <? echo $arCurView['TITLE']; ?>"
 		id="<? echo $this->GetEditAreaId($arResult['SECTION']['ID']); ?>"
-	><a href="<? echo $arResult['SECTION']['SECTION_PAGE_URL']; ?>"><?
+	><a class="section__name-link" href="<? echo $arResult['SECTION']['SECTION_PAGE_URL']; ?>"><?
 		echo (
 			isset($arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]) && $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"] != ""
 			? $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]
