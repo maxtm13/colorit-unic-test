@@ -90,25 +90,45 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
                             <div class="section_search">
                                 <? //todo search form replace
-                                $APPLICATION->IncludeComponent(
-                                    "bitrix:search.title",
+//                                $APPLICATION->IncludeComponent(
+//                                    "bitrix:search.title",
+//                                    "visual",
+//                                    array(
+//                                        "CATEGORY_0" => array("no"),
+//                                        "CATEGORY_0_TITLE" => "",
+//                                        "CHECK_DATES" => "N",
+//                                        "CONTAINER_ID" => "footer__title-search",
+//                                        "INPUT_ID" => "footer__title-search-input",
+//                                        "NUM_CATEGORIES" => "1",
+//                                        "ORDER" => "date",
+//                                        "PAGE" => "#SITE_DIR#search/index.php",
+//                                        "SHOW_INPUT" => "Y",
+//                                        "SHOW_OTHERS" => "N",
+//                                        "TOP_COUNT" => "5",
+//                                        "USE_LANGUAGE_GUESS" => "Y"
+//                                    )
+//                                );
+//                                ?>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:search.form",
                                     "visual",
                                     array(
-                                        "CATEGORY_0" => array("no"),
-                                        "CATEGORY_0_TITLE" => "",
-                                        "CHECK_DATES" => "N",
-                                        "CONTAINER_ID" => "footer__title-search",
-                                        "INPUT_ID" => "footer__title-search-input",
-                                        "NUM_CATEGORIES" => "1",
-                                        "ORDER" => "date",
-                                        "PAGE" => "#SITE_DIR#search/index.php",
+                                        "PAGE" => "#SITE_DIR#search.php",
+                                        "USE_SUGGEST" => "N",
+                                        "COMPONENT_TEMPLATE" => "visual",
                                         "SHOW_INPUT" => "Y",
-                                        "SHOW_OTHERS" => "N",
-                                        "TOP_COUNT" => "5",
-                                        "USE_LANGUAGE_GUESS" => "Y"
-                                    )
-                                );
-                                ?>
+                                        "INPUT_ID" => "title-search-input",
+                                        "CONTAINER_ID" => "title-search",
+                                        "PRICE_CODE" => array(
+                                        ),
+                                        "PRICE_VAT_INCLUDE" => "Y",
+                                        "PREVIEW_TRUNCATE_LEN" => "",
+                                        "SHOW_PREVIEW" => "Y",
+                                        "PREVIEW_WIDTH" => "75",
+                                        "PREVIEW_HEIGHT" => "75"
+                                    ),
+                                    false
+                                );?>
                             </div>
                         </div>
                     </div>
@@ -160,7 +180,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
                     </div>
                     <div class="footer__phone">
-                        <a href="<?=preg_replace('/[^0-9]/', '',$phone)  ?>" ><?=$phone ?></a>
+                        <a href="tel:<?=preg_replace('/[^0-9]/', '',$phone)  ?>" ><?=$phone ?></a>
                     </div>
                     <div class="footer__address">
                         <?=$address?>

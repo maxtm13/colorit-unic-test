@@ -242,7 +242,7 @@
 }
 
 #left-menu .subParent {
-  color: rgb(95, 94, 100);
+  color: #141c20;
 }
 
 #left-menu .subParent li:hover > a:hover,
@@ -278,6 +278,11 @@ div.menu-clear-left {
   clear: left;
 }
 
+@media (max-width: 1330px) {
+  .header .left-menu {
+    column-gap: 16px;
+  }
+}
 @media (max-width: 768px) {
   #left-menu li.parent.active ul {
     display: block;
