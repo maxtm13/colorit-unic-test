@@ -147,6 +147,9 @@ svsg {
   font-weight: 700;
   line-height: 1.07;
 }
+.header__content_btn .link > a {
+  height: unset;
+}
 .header__search_wrapper {
   display: none;
   position: absolute;
