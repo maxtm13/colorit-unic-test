@@ -24,7 +24,7 @@ h3 {
 body {
   padding: 0;
   margin: 0;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Ubuntu Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4857142857;
@@ -261,13 +261,12 @@ svsg {
   width: 100%;
   max-height: 199px;
   position: relative;
-  border: 3px solid #17171b;
-  overflow: hidden;
 }
 .anonce .category__item_pict {
   object-fit: cover;
   object-position: center;
   width: 100%;
+  border: 3px solid #17171b;
   -webkit-transition: scale 0.3s;
   -moz-transition: scale 0.3s;
   -ms-transition: scale 0.3s;
@@ -294,9 +293,8 @@ svsg {
 .anonce .anonce__item {
   position: relative;
 }
-.anonce .anonce__item-wrapper {
+.anonce .anonce__item-wrapper .section_pict {
   border: 3px solid #17171B;
-  overflow: hidden;
 }
 .anonce .anonce__item_main {
   display: flex;

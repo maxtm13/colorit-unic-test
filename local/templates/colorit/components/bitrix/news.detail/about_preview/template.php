@@ -34,13 +34,13 @@ $this->setFrameMode(true);
 </div>
 
 
-<h2 class="section__title">Главный офис:</h2>
+<h2 class="section__title"><?=$arResult["NAME"]?> </h2>
 
 <div class="contacts">
 <!--    <div class='contacts__map' id="map" style="width: 951px; height: 544px"></div>-->
     <div class='contacts__map' id="map"></div>
     <div class="contacts__info">
-        <h3 class="contacts__info_title">Главный офис:</h3>
+        <h3 class="contacts__info_title"><?=$arResult["NAME"]?>:</h3>
         <div class="contacts__info_wrapper">
             <div class="contacts__info_address"><?= $arResult['PROPERTIES']['ADDRESS']['VALUE'] ?></div>
             <div class="contacts__info_items">

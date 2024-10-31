@@ -34,7 +34,7 @@ unset($arIBlockElement);
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
-                href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+                href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
                 rel="stylesheet">
         <?
         CJSCore::Init(array("jquery3"));
