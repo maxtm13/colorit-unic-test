@@ -7,10 +7,9 @@
   column-gap: 24px;
 }
 
-.contacts__info_items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 24px;
+.contacts__info {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .contacts__info_title {
@@ -20,12 +19,15 @@
 
 .contacts__info_address {
   font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .contacts__item {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 15px;
+  margin-bottom: 15px;
 }
 
 .contact__title {

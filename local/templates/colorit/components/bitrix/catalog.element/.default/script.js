@@ -3601,7 +3601,6 @@
 // 	}
 // })(window);
 $(document).ready(function (){
-
 	$('.slider-section-slider').slick({
 		infinite: true,
 		slidesToShow: 4,

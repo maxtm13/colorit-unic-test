@@ -6,7 +6,18 @@ $APPLICATION->ShowTitle();
 ?><section class="section__news">
 <div class="container">
  <div class="section__news header">
-  <h2 class="section__title">Новости</h2>
+  <h2 class="section__title">
+      <? $APPLICATION->IncludeComponent(
+          "bitrix:main.include",
+          "",
+          array(
+              "AREA_FILE_SHOW" => "file",
+              "AREA_FILE_SUFFIX" => "inc",
+              "EDIT_TEMPLATE" => "",
+              "PATH" => "/includes/sections/news.php"
+          )
+      ); ?>
+  </h2>
   <div class="section__news_btn d-none d-md-block">
    <a href="/news/" class="btn_link">
     <span class="btn_text">Все новости</span>

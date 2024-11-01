@@ -274,6 +274,7 @@ svsg {
   -moz-transition: scale 0.3s;
   -ms-transition: scale 0.3s;
   -o-transition: scale 0.3s;
+  filter: grayscale(1);
   transition: scale 0.3s;
 }
 .anonce .category__item_title {
@@ -292,6 +293,7 @@ svsg {
 }
 .anonce .category__item:hover .category__item_pict {
   scale: 1.1;
+  filter: grayscale(0);
 }
 .anonce .anonce__item {
   position: relative;
@@ -482,6 +484,7 @@ svsg {
 }
 .advantages-list .advantages-item:hover {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 4px 4px 0 rgba(0, 0, 0, 0.05), 0 8px 8px 0 rgba(0, 0, 0, 0.05), 0 16px 16px 0 rgba(0, 0, 0, 0.05), 0 32px 32px 0 rgba(0, 0, 0, 0.05), 0 0 64px 0 rgba(0, 0, 0, 0.05);
+  scale: 1.03;
 }
 .advantages-list .advantages-item:hover::after {
   position: absolute;
@@ -546,8 +549,8 @@ svsg {
   background-size: cover;
 }
 .section__about #map {
-  width: 951px;
-  height: 544px;
+  width: 700px;
+  height: 400px;
 }
 .section__about .section__content {
   width: 903px;
@@ -1154,6 +1157,10 @@ svsg {
   object-fit: cover;
   height: 261px;
   width: 95%;
+}
+.catalog .slider .slider-section-slider.no-slider {
+  display: flex;
+  flex-direction: row;
 }
 .catalog .charakteristics {
   margin-bottom: 57px;

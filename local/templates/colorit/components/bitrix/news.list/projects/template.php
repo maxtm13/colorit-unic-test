@@ -16,9 +16,17 @@ $this->setFrameMode(true);
 
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_THEME'] : '';
 ?>
+<?php
+//echo '<pre>';
+//print_r($arParams['PAGER_TITLE']);
+//echo '</pre>';
 
+?>
         <div class="row">
-            <h1><?=$arResult['NAME']?></h1>
+            <h1>
+                <?//=$arResult['NAME']?>
+                <?=$arParams['PAGER_TITLE']?>
+            </h1>
             <div class="news-list ">
                 <? foreach ($arResult["ITEMS"] as $arItem): ?>
                     <?

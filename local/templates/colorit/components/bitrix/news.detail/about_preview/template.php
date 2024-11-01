@@ -78,7 +78,7 @@ $this->setFrameMode(true);
 
 
 <script>
-    let centerMap = [44.390556, 46.167604],
+    let centerMap = [45.390556, 42.167604],
         pinImageSize = [40, 52],
         pinIconImageOffset= [-20, -52],
         metka = [40, 40],
@@ -86,6 +86,7 @@ $this->setFrameMode(true);
 
     if (document.documentElement.clientWidth <= 561) {
         centerMap = [45.589751, 39.970458];
+        // centerMap = [42.902807, 46.285655];
         pinImageSize = [15, 19];
         pinIconImageOffset = [-pinImageSize[0]/2,-pinImageSize[1]];
         metka = [15, 15];
@@ -100,7 +101,7 @@ $this->setFrameMode(true);
         }, {
             searchControlProvider: 'yandex#search'
         })
-        myMap.behaviors.disable(["scrollZoom", "drag"])
+        // myMap.behaviors.disable(["drag"])
         // Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
